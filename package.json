@@ -1,0 +1,11 @@
+{
+  "name": "p3_evelyne_arits",
+  "version": "1.0.0",
+  "description": "Openclassroom Project 3: Ohmyfood! Scenario You have just been recruited at Ohmyfood !, as a junior developer. Congratulations!",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
