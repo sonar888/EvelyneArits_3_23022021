@@ -17,13 +17,18 @@
     margin: 0 auto;
     padding: 10px 0;
     box-shadow: 0 3px 0px grey;
-
 }
 
 @mixin h2_font {
     font-family: Roboto, Verdana, sans-serif;
     font-size: 1.5rem;
     font-weight: bolder;
+}
+
+@mixin OMF {
+    font-family: Shrikhand, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: normal;
 }
 
 @mixin p_font {
@@ -50,4 +55,39 @@
         border: solid $secondary-color;
         border-radius: 25px;
     }
+}
+
+@mixin footer {
+    display: flex;
+    flex-direction: column;
+    background-color: darken($background-color, 80%);
+    color: white;
+    margin: 0 ;
+    width: 100%;
+    padding: 15px 0;
+    & h2 {
+        @include OMF;
+        @include footer_align;     
+    }
+
+    & ul {
+       @include footer_align; 
+    }
+
+    & .__list {
+        list-style-type: none;
+        padding: 7px;
+        display: flex;
+        flex-direction: row;
+        & i {
+            width: 30px;
+        }
+    }
+    
+}
+
+@mixin footer_align {
+    width: 50%;
+    padding: 0;
+    margin-left: 20px; 
 }
