@@ -3,12 +3,14 @@ body {
   max-width: 414px;
   margin: auto;
   border: solid black;
+  font-size: 1rem;
   font-family: Roboto, Verdana, sans-serif;
+  font-size: 1rem;
 }
 
 h1 {
   font-family: Shrikhand, Verdana, sans-serif;
-  font-size: 28px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -16,6 +18,59 @@ h1 {
   margin: 0 auto;
   padding: 10px 0;
   box-shadow: 0 3px 0px grey;
+}
+
+.localisation {
+  background-color: #e6ebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.localisation i {
+  padding: 0 15px;
+}
+
+.headline {
+  background-color: #F4F6F6;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  font-family: Roboto, Verdana, sans-serif;
+  font-size: 1rem;
+  border: solid black;
+  text-align: center;
+}
+.headline__h2 {
+  font-family: Roboto, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 65%;
+}
+.headline__p {
+  width: 80%;
+}
+.headline__btn {
+  margin: 20px;
+  padding: 15px;
+  border: solid #FF79DA;
+  border-radius: 25px;
+  background-color: #FF79DA;
+  color: white;
+  width: 65%;
+}
+.headline__btn:focus {
+  border: solid #FF79DA;
+  border-radius: 25px;
+}
+.headline .--margin {
+  margin: 15px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

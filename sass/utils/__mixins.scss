@@ -3,11 +3,12 @@
     max-width: 414px;
     margin: auto;
     border: solid black;
+    font-size: 1rem;
 }
 
 @mixin title_font {
     font-family: Shrikhand, Verdana, sans-serif;
-    font-size: 28px;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -19,6 +20,34 @@
 
 }
 
+@mixin h2_font {
+    font-family: Roboto, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
 @mixin p_font {
     font-family: Roboto, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+@mixin flex ($direction:column) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: $direction;
+}
+
+@mixin btn {
+    padding: nth($margin_padding, 3);
+    border: solid $secondary-color;
+    border-radius: 25px;
+    background-color: $secondary-color;
+    color: white;
+    
+    &:focus {
+        border: solid $secondary-color;
+        border-radius: 25px;
+    }
 }
