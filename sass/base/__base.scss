@@ -1,8 +1,5 @@
 //In this file you will find the base for the webpage
 
 body {
-    width: 100%;
-    max-width: 414px;
-    margin: auto;
-    border: solid black;
+    @include body;
 }
