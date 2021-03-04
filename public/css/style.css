@@ -1,3 +1,8 @@
-
+body {
+  width: 100%;
+  max-width: 414px;
+  margin: auto;
+  border: solid black;
+}
 
 /*# sourceMappingURL=style.css.map */
