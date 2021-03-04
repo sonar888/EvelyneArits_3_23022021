@@ -2,4 +2,10 @@
 
 body {
     @include body;
+    @include p_font;
 }
+
+h1 {
+    @include title_font;
+}
+

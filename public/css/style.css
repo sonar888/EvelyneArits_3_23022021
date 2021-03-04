@@ -3,6 +3,19 @@ body {
   max-width: 414px;
   margin: auto;
   border: solid black;
+  font-family: Roboto, Verdana, sans-serif;
+}
+
+h1 {
+  font-family: Shrikhand, Verdana, sans-serif;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-shadow: 0 3px 0px grey;
 }
 
 /*# sourceMappingURL=style.css.map */
