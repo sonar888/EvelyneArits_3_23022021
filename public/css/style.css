@@ -44,7 +44,6 @@ h1 {
   flex-direction: column;
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1rem;
-  border: solid black;
   text-align: center;
 }
 .headline__h2 {
@@ -71,6 +70,19 @@ h1 {
 }
 .headline .--margin {
   margin: 15px auto;
+}
+
+.working {
+  padding: 20px 0;
+  width: 90%;
+  margin: auto;
+  border: solid blue;
+}
+.working__list {
+  width: 100%;
+  background-color: #F4F6F6;
+  padding: 10px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

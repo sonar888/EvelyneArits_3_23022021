@@ -13,7 +13,7 @@
     padding: 40px 0;
     @include flex;
     @include p_font;
-    border: solid black;
+    //border: solid black;
     text-align: center;
     &__h2 {
         @include h2_font;
@@ -31,4 +31,19 @@
         margin: 15px auto;
     }
 
+}
+
+.working {
+
+    padding: nth($margin_padding, 4) 0;
+    width: 90%;
+    margin: auto;
+    border: solid blue;
+    &__list {
+        width: 100%;
+        background-color: $background-color;
+        padding: 10px;
+        margin: 10px;
+    }
+    
 }
