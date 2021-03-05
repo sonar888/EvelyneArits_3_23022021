@@ -118,9 +118,24 @@
     }
 
     &__fig {
+        background-color: white;
+        border-radius: 25px;
+        height: 400px;
+        margin: 20px auto;
         & img {
-            max-width: 100%;
+            width: 100%;
+            height: 320px;
             object-fit: cover;
+            @include radius;
+            margin: 0;
+            padding: 0;
+        }
+
+        & figcaption {
+            height: 80px;
+            border: solid red;
+            margin: 0;
+            padding: 0;
         }
     }
 
