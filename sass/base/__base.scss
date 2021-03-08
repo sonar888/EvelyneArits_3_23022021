@@ -7,5 +7,20 @@ body {
 
 h1 {
     @include title_font;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0px 5px 5px darken($color: $background-color, $amount: 30%);
+}
+
+.__page-link {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        color: $primary-color;
+    }
+    &:active {
+        text-decoration: none;
+        color: $background-color;
+    }
+
 }
 
