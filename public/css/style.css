@@ -172,30 +172,33 @@ h1 {
 }
 .restaurants__img {
   width: 100%;
-  height: 75%;
+  height: 70%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
   margin: 0;
   padding: 0;
+  vertical-align: middle;
 }
 .restaurants figcaption {
-  height: 25%;
+  height: 30%;
   width: 100%;
-  border: solid red;
   display: flex;
-  margin: auto 0;
-  justify-content: space-between;
+  margin: 0 0;
+  padding: 0;
 }
 .restaurants figcaption div {
   display: flex;
-  width: 40%;
+  width: auto;
+  height: 100%;
+  margin: auto 0;
   flex-direction: column;
-  border: solid green;
   padding: 0 15px;
+  justify-content: center;
 }
 .restaurants figcaption div .fas {
   color: #9356DC;
-  text-align: right;
+  font-size: 2rem;
+  margin: 0 0 0 125px;
 }
 .restaurants figcaption h3 {
   padding: 0;
