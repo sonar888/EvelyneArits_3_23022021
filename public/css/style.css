@@ -63,7 +63,6 @@ h1 {
   margin: auto;
 }
 .headline__h2 {
-  font-family: Roboto, Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: bolder;
   width: 85%;
@@ -81,7 +80,7 @@ h1 {
   border-radius: 50px;
   background-image: linear-gradient(-30deg, #9356DC, #FF79DA);
   padding: auto 10px;
-  margin: 5px 0;
+  margin: auto;
   box-shadow: #e6ebeb 1px 1px;
   outline: none;
   transform: scale(1);
@@ -103,7 +102,6 @@ h1 {
   margin: auto;
 }
 .working h2 {
-  font-family: Roboto, Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: bolder;
   margin-top: 20px;
@@ -160,7 +158,6 @@ h1 {
   padding: 10px 0;
 }
 .restaurants h2 {
-  font-family: Roboto, Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: bolder;
 }
@@ -248,6 +245,108 @@ footer .__list {
 footer .__list i {
   width: 30px;
   padding-right: 10px;
+}
+
+.menu__header {
+  position: relative;
+}
+.menu__header--headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+}
+.menu__header--headline .fa-arrow-left {
+  padding: 15px 15px;
+  align-items: left;
+  color: black;
+}
+.menu__header--headline h1 {
+  font-family: Shrikhand, Verdana, sans-serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-shadow: none;
+  width: 100%;
+  background-color: transparent;
+}
+.menu__header--img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  background-color: #F4F6F6;
+  padding: 20px 0;
+  margin: -55px 0;
+  border-radius: 45px 45px 0 0;
+}
+.menu__headline {
+  border: red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+}
+.menu__headline h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: Shrikhand, Verdana, sans-serif;
+  border: solid green;
+  text-align: center;
+}
+.menu__headline .far {
+  border: solid green;
+}
+.menu section {
+  width: 100%;
+}
+.menu section .menu__choice {
+  border: solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 25px;
+  justify-content: flex-start;
+}
+.menu__btn {
+  display: flex;
+}
+.menu__btn .btn {
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-image: linear-gradient(-30deg, #9356DC, #FF79DA);
+  padding: auto 10px;
+  margin: auto;
+  box-shadow: #e6ebeb 1px 1px;
+  outline: none;
+  transform: scale(1);
+  cursor: pointer;
+  font-family: Roboto, Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin: 25px auto;
+  width: 50%;
+}
+.menu__btn .btn:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

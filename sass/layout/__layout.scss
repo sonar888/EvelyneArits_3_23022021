@@ -2,3 +2,35 @@ footer {
     @include footer;    
 }
 
+.menu__header {
+    position: relative;
+    &--headline {
+        @include flex (row);
+        align-items: baseline;
+        //border: solid green;
+        position: relative;
+
+        & .fa-arrow-left {
+            // border: solid blue;
+            padding: 15px 15px;
+            align-items: left;
+            color: black;
+        }
+
+        & h1 {
+            @include title_font;
+            box-shadow: none;
+            
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+    
+    
+    &--img {
+        height: auto;
+        width:  100%;
+        object-fit: cover;
+    }
+}
+
