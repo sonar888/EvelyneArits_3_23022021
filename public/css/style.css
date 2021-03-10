@@ -1,11 +1,16 @@
 body {
   width: 100%;
-  max-width: 414px;
+  max-width: 415px;
   margin: auto;
   font-size: 1rem;
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.2rem;
   color: black;
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
 }
 
 h1 {

@@ -1,10 +1,4 @@
-@mixin body {
-    width: 100%;
-    max-width: 414px;
-    margin: auto;
-    //border: solid black;
-    font-size: 1rem;
-}
+
 
 @mixin title_font {
     font-family: Shrikhand, Verdana, sans-serif;
@@ -110,3 +104,20 @@
 @mixin radius {
     border-radius: 20px 20px 0 0;
 }
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$mobile-width: 415px;
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
