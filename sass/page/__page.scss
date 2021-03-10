@@ -11,7 +11,7 @@
     // @include flex;
 
     &__headline {
-        border: red solid;
+        // border: red solid;
         @include flex (row);
         align-items: baseline;
         justify-content: space-around;
@@ -20,29 +20,18 @@
         & h2 {
             @include h2_font;
             font-family: Shrikhand, Verdana, sans-serif;
-            border: solid green;
+            // border: solid green;
             text-align: center;
         }
 
         & .far {
-            border: solid green;
+            // border: solid green;
+            color: black;
+            @include h2_font;
             // text-align: center;
+            //il faut 2 coeurs et travailler avec opacity
         }
         
-    }
-
-    & section {
-        width: 100%;
-
-        & .menu__choice {
-            border: solid blue;
-            @include flex (row);
-            background-color: white;
-            margin: 10px auto;
-            border-radius: 25px;
-            justify-content: flex-start;
-            // width: 100%;
-        }
     }
     
     &__btn {
@@ -57,6 +46,45 @@
 
 }
 
+
+section {
+    width: 100%;
+
+    & h3 {
+        color: black ;
+        border-bottom: $third-color solid;
+        width: fit-content;
+        padding-bottom: 10px;
+        font-weight: normal;
+    }
+
+    & .menu__choice {
+        // border: solid blue;
+        @include flex (row);
+        background-color: white;
+        margin: 10px auto;
+        border-radius: 25px;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+
+        &--choice {
+            // border: solid red;
+            width: auto;
+            max-width: 80%;
+            padding-left: 10px;
+        }
+        &--price {
+            // border: solid green;
+            width: 10%;
+            position: absolute;
+            left: 90%;
+            bottom: 0%;
+            font-weight: bold;
+        
+        }
+    }
+}
 
 
 

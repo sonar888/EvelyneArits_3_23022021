@@ -290,7 +290,6 @@ footer .__list i {
   border-radius: 45px 45px 0 0;
 }
 .menu__headline {
-  border: red solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,26 +303,12 @@ footer .__list i {
   font-size: 1.5rem;
   font-weight: bolder;
   font-family: Shrikhand, Verdana, sans-serif;
-  border: solid green;
   text-align: center;
 }
 .menu__headline .far {
-  border: solid green;
-}
-.menu section {
-  width: 100%;
-}
-.menu section .menu__choice {
-  border: solid blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: row;
-  background-color: white;
-  margin: 10px auto;
-  border-radius: 25px;
-  justify-content: flex-start;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 .menu__btn {
   display: flex;
@@ -347,6 +332,42 @@ footer .__list i {
 }
 .menu__btn .btn:hover {
   transform: scale(1.1);
+}
+
+section {
+  width: 100%;
+}
+section h3 {
+  color: black;
+  border-bottom: #99E2D0 solid;
+  width: fit-content;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+section .menu__choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 25px;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+section .menu__choice--choice {
+  width: auto;
+  max-width: 80%;
+  padding-left: 10px;
+}
+section .menu__choice--price {
+  width: 10%;
+  position: absolute;
+  left: 90%;
+  bottom: 0%;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
