@@ -25,6 +25,12 @@ h1 {
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0px 5px 5px #a0b1b1;
 }
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    padding: 40px 0;
+  }
+}
 
 .__page-link {
   text-decoration: none;
@@ -115,6 +121,15 @@ h1 {
   list-style: none;
   counter-reset: customised-counter;
 }
+@media (min-width: 1024px) {
+  .working ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
 .working ol li {
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.2rem;
@@ -127,6 +142,14 @@ h1 {
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0px 5px 10px #bcc8c8;
   counter-increment: customised-counter;
+}
+@media (min-width: 1024px) {
+  .working ol li {
+    display: flex;
+    justify-content: space-evenly;
+    border: solid green;
+    width: 30%;
+  }
 }
 .working ol li:hover {
   color: #9356DC;
@@ -151,11 +174,19 @@ h1 {
   size: 1.2rem;
   padding: 15px 0 15px 40px;
 }
+@media (min-width: 1024px) {
+  .working ol li .fas {
+    padding: 0;
+    justify-content: space-between;
+    border: solid red;
+  }
+}
 .working ol li p {
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.2rem;
   color: black;
   font-weight: normal;
+  border: solid red;
 }
 
 .restaurants {
@@ -166,11 +197,27 @@ h1 {
   font-size: 1.5rem;
   font-weight: bolder;
 }
+@media (min-width: 1024px) {
+  .restaurants__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
 .restaurants__fig {
   background-color: white;
   border-radius: 25px;
   height: 250px;
   margin: 0 auto 60px auto;
+}
+@media (min-width: 1024px) {
+  .restaurants__fig {
+    width: 40%;
+  }
 }
 .restaurants__img {
   width: 100%;

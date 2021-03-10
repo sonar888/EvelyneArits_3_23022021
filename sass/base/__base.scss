@@ -16,6 +16,10 @@ h1 {
     @include title_font;
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: 0px 5px 5px darken($color: $background-color, $amount: 30%);
+    @include desktop{
+        font-size: 3rem;
+        padding: 40px 0;
+    }
 }
 
 .__page-link {

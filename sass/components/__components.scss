@@ -55,6 +55,9 @@
     & ol {
         list-style: none;
         counter-reset: customised-counter;
+        @include desktop{
+            @include flex(row);
+        }
     
 
         & li {
@@ -67,6 +70,14 @@
             position: relative;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
+
+            @include desktop{
+                display: flex;
+                justify-content: space-evenly;
+                border: solid green; 
+                width: 30%;
+                
+            } 
             &:hover {
                 color: $primary-color;
             }
@@ -95,13 +106,20 @@
                 // border: solid blue;
                 size: $p_size;
                 padding: 15px 0 15px 40px;
+                @include desktop{
+                  padding: 0;
+                  justify-content: space-between; 
+                  border: solid red; 
+                } 
                 
                   
             }
     
             & p {
                 @include p_font;
-                font-weight: normal;   
+                font-weight: normal;  
+                border: solid red;
+                
             }
     
         
@@ -119,12 +137,24 @@
         @include h2_font;
     }
 
+    &__container {
+        @include desktop{
+            @include flex (row);
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        
+    }
+
     &__fig {
         background-color: white;
         border-radius: 25px;
         height: 250px;
         margin: 0 auto 60px auto;
         // border: solid blue;
+        @include desktop{
+            width: 40%;
+        }
     }
     &__img {
         width: 100%;
