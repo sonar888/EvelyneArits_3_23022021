@@ -20,9 +20,12 @@ footer {
         & h1 {
             @include title_font;
             box-shadow: none;
-            
             width: 100%;
             background-color: transparent;
+            @include desktop{
+                font-size: 3rem;
+                padding: 40px 0;
+            }
         }
     }
     
@@ -32,6 +35,10 @@ footer {
         max-height: 280px;
         width:  100%;
         object-fit: cover;
+        @include desktop{
+            height: auto;
+            min-height: 280px;
+        }
     }
 }
 
