@@ -9,6 +9,7 @@
     border-radius: $menu_radius $menu_radius 0 0;
     // border: solid red;
     // @include flex;
+    width: 100%;
 
     &__headline {
         // border: red solid;
@@ -33,7 +34,63 @@
         }
         
     }
-    
+    &__section {
+        &--h3 {
+            color: black ;
+            border-bottom: $third-color solid;
+            width: 15%;
+            padding-bottom: 10px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 40px 0 30px 0;
+            
+        }
+    }   
+
+    &__choice {
+        border: solid blue;
+        @include flex (row);
+        background-color: white;
+        margin: 10px auto;
+        border-radius: 25px;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        
+
+        &--choice {
+            border: solid red;
+            width: auto;
+            max-width: 80%;
+            padding-left: 10px;
+            font-size: 1rem;
+            & strong {
+                @include h3_font;
+            }
+        }
+        &--price {
+            border: solid green;
+            width: 10%;
+            position: absolute;
+            left: 90%;
+            bottom: 0%;
+            font-weight: bold;
+        }
+        &--select {
+            color: $third-color;
+            border: red solid;
+            width: 15%;
+            height: 100%;
+            text-align: center;
+            font-size: 2rem;
+            transform: opacity(0);
+            transition: transform 500ms;   
+        }
+
+        
+    }
+
     &__btn {
         display: flex;
         .btn {
@@ -44,46 +101,6 @@
         }
     }
 
-}
-
-
-section {
-    width: 100%;
-
-    & h3 {
-        color: black ;
-        border-bottom: $third-color solid;
-        width: fit-content;
-        padding-bottom: 10px;
-        font-weight: normal;
-    }
-
-    & .menu__choice {
-        // border: solid blue;
-        @include flex (row);
-        background-color: white;
-        margin: 10px auto;
-        border-radius: 25px;
-        justify-content: space-between;
-        width: 100%;
-        position: relative;
-
-        &--choice {
-            // border: solid red;
-            width: auto;
-            max-width: 80%;
-            padding-left: 10px;
-        }
-        &--price {
-            // border: solid green;
-            width: 10%;
-            position: absolute;
-            left: 90%;
-            bottom: 0%;
-            font-weight: bold;
-        
-        }
-    }
 }
 
 
