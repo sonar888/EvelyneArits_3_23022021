@@ -55,20 +55,39 @@
         }
     }   
 
-    &__choice {
-        border: solid blue;
-        @include flex (row);
-        background-color: white;
-        margin: 10px auto;
+    &__figure {
+        width: 100%;
+        // border: solid red;
+        @include flex(row);
         border-radius: 25px;
+        background-color: white;
+        padding: 0;
+        &:hover > .menu__choice--select {
+            opacity: 1;
+        }
+        &:hover .menu__choice--price {
+            transform: translateX(-100%);
+        }
+        &:hover .far {
+            opacity: 1; 
+            transform: rotate(0deg);
+        }
+           
+    }
+    
+    &__choice {
+        @include flex (row);
         justify-content: space-between;
         width: 100%;
-        padding: 0;
+        display: inline;
         position: relative;
+        // border: solid purple;
+        margin: 0px auto;
+        padding: 0;
         
-
         &--choice {
-            border: solid red;
+            // border: solid red;
+            margin: 0;
             width: auto;
             max-width: 80%;
             padding-left: 10px;
@@ -78,22 +97,39 @@
             }
         }
         &--price {
-            border: solid green;
+            // border: solid green;
             width: 10%;
+            padding-right: 10px;
+            // height: 100%;
             position: absolute;
-            left: 90%;
-            bottom: 0%;
+            left: 100%;
+            bottom: -50%;
             font-weight: bold;
+            text-align: bottom;
+            transform: translateX(0);
+            transition: transform 500ms;
         }
-        &--select {
-            color: $third-color;
-            border: red solid;
-            width: 15%;
-            height: 100%;
+        &--select {  
+            background-color: $third-color;
+            height: 100%;;
+            // border: red solid;
+            border-radius: 0 25px 25px 0;
+            width: 20%;
             text-align: center;
-            font-size: 2rem;
-            transform: opacity(0);
-            transition: transform 500ms;   
+            font-size: 3rem;
+            opacity: 0;
+            padding: 0;
+            margin: 0;
+            
+            & .far {
+                color: white;
+                transform: rotate(180deg);
+                background-color: transparent;
+                opacity: 0;
+                transition: transform 500ms;
+                padding: 0;
+                
+            }  
         }
 
         
