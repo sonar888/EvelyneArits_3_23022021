@@ -19,6 +19,20 @@ body {
   }
 }
 
+.loading-page {
+  height: 100px;
+  width: 100%;
+  background-color: #99E2D0;
+}
+.loading-page .loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+.loading-page .loader--quart {
+  border-radius: 50px;
+}
+
 h1 {
   font-family: Shrikhand, Verdana, sans-serif;
   font-size: 2rem;
