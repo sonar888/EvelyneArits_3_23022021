@@ -24,6 +24,7 @@ h1 {
   padding: 10px 0;
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0px 5px 5px #a0b1b1;
+  background-color: white;
 }
 @media (min-width: 1300px) {
   h1 {
@@ -32,16 +33,53 @@ h1 {
   }
 }
 
-.__page-link {
-  text-decoration: none;
-  color: black;
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #252d2d;
+  color: white;
+  margin: 0;
+  width: 100%;
+  padding: 15px 0;
 }
-.__page-link:hover {
-  color: #9356DC;
+@media (min-width: 1300px) {
+  footer {
+    padding: 25px 0;
+  }
 }
-.__page-link:active {
-  text-decoration: none;
-  color: #F4F6F6;
+footer h2 {
+  font-family: Shrikhand, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  width: 100%;
+  padding: 0;
+  margin-left: 20px;
+}
+footer ul {
+  width: 100%;
+  padding: 0;
+  margin-left: 20px;
+}
+@media (min-width: 1300px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 25px;
+  }
+}
+footer .__list {
+  list-style-type: none;
+  padding: 7px;
+  display: flex;
+  flex-direction: row;
+}
+footer .__list i {
+  width: 30px;
+  padding-right: 10px;
 }
 
 .localisation {
@@ -266,41 +304,9 @@ h1 {
   color: black;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #252d2d;
-  color: white;
-  margin: 0;
-  width: 100%;
-  padding: 15px 0;
-}
-footer h2 {
-  font-family: Shrikhand, Verdana, sans-serif;
-  font-size: 1.1rem;
-  font-weight: normal;
-  width: 100%;
-  padding: 0;
-  margin-left: 20px;
-}
-footer ul {
-  width: 100%;
-  padding: 0;
-  margin-left: 20px;
-}
-footer .__list {
-  list-style-type: none;
-  padding: 7px;
-  display: flex;
-  flex-direction: row;
-}
-footer .__list i {
-  width: 30px;
-  padding-right: 10px;
-}
-
 .menu__header {
   position: relative;
+  background-color: white;
 }
 .menu__header--headline {
   display: flex;
@@ -346,6 +352,22 @@ footer .__list i {
     height: auto;
     min-height: 280px;
   }
+}
+
+.__page-link {
+  text-decoration: none;
+  color: black;
+}
+.__page-link:hover {
+  color: #9356DC;
+}
+.__page-link:active {
+  text-decoration: none;
+  color: #F4F6F6;
+}
+
+.--color {
+  color: white;
 }
 
 .menu {

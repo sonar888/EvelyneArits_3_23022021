@@ -72,13 +72,21 @@
     margin: 0 ;
     width: 100%;
     padding: 15px 0;
+    @include desktop{
+        padding: 25px 0;
+    }
     & h2 {
         @include OMF;
         @include footer_align;     
     }
 
     & ul {
-       @include footer_align; 
+       @include footer_align;
+       @include desktop{
+           @include flex(row);
+           justify-content: space-around;
+           padding-bottom: 25px;
+       }
     }
 
     & .__list {

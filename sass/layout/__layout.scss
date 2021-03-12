@@ -1,9 +1,8 @@
-footer {
-    @include footer;    
-}
+
 
 .menu__header {
     position: relative;
+    background-color: white;
     &--headline {
         @include flex (row);
         align-items: baseline;
@@ -40,5 +39,23 @@ footer {
             min-height: 280px;
         }
     }
+}
+
+
+.__page-link {
+    text-decoration: none;
+    color: black;
+    
+    &:hover {
+        color: $primary-color;
+    }
+    &:active {
+        text-decoration: none;
+        color: $background-color;
+    }
+
+}
+.--color{
+    color: white;  
 }
 
