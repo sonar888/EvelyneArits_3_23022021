@@ -51,18 +51,69 @@
     padding: nth($margin_padding, 3);
     border: none;
     border-radius: 50px;
-    background-image: linear-gradient(-30deg, $primary-color, $secondary-color);
     padding: auto 10px;
     margin: auto;
-    box-shadow: darken($background-color, 5%) 1px 1px;
+    box-shadow: darken($background-color, 10%) 1px 5px;
     outline: none;
     transform: scale(1);
+    transition: 500ms;
     cursor:pointer;
+    z-index:0;
+    background-image: linear-gradient(-30deg, lighten($primary-color, 10%), lighten($secondary-color, 5%));
+    
+    &::before {
+        content: "";
+        position: absolute;
+        z-index:-1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(-30deg, $primary-color, $secondary-color);
+        transition: all 500ms;
+        
+      }
     &:hover {
         transform: scale(1.1);
-
+        box-shadow: darken($background-color, 20%) 1px 7px;
+       
+        &::before {
+            opacity:0;    
+        }
     }
 }
+
+button {
+    border: solid orange 2px;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    z-index:0;
+    background:transparent;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    z-index:-1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(red, yellow);
+    transition:1s;
+  }
+  .button:hover::before {
+    opacity:0;
+  }
+
+
 
 @mixin footer {
     display: flex;
