@@ -1,34 +1,3 @@
-button {
-  border: solid orange 2px;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  background: transparent;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(red, yellow);
-  transition: 1s;
-}
-
-.button:hover::before {
-  opacity: 0;
-}
-
 body {
   width: 100%;
   max-width: 415px;
@@ -38,9 +7,15 @@ body {
   font-size: 1.2rem;
   color: black;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
   body {
-    max-width: 1290px;
+    min-width: 900px;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
+  body {
+    max-width: 1024px;
+    min-width: 900px;
   }
 }
 
@@ -57,7 +32,13 @@ h1 {
   box-shadow: 0px 5px 5px #a0b1b1;
   background-color: white;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    padding: 40px 0;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   h1 {
     font-size: 3rem;
     padding: 40px 0;
@@ -73,7 +54,7 @@ footer {
   width: 100%;
   padding: 15px 0;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
   footer {
     padding: 25px 0;
   }
@@ -91,7 +72,7 @@ footer ul {
   padding: 0;
   margin-left: 20px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
   footer ul {
     display: flex;
     justify-content: center;
@@ -181,6 +162,7 @@ footer .__list i {
   bottom: 0;
   background-image: linear-gradient(-30deg, #9356DC, #FF79DA);
   transition: all 500ms;
+  border-radius: 50px;
 }
 .headline__btn:hover {
   transform: scale(1.1);
@@ -207,7 +189,16 @@ footer .__list i {
   list-style: none;
   counter-reset: customised-counter;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .working ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .working ol {
     display: flex;
     justify-content: center;
@@ -220,6 +211,7 @@ footer .__list i {
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.2rem;
   color: black;
+  white-space: nowrap;
   align-items: baseline;
   background-color: #F4F6F6;
   border-radius: 25px;
@@ -227,9 +219,18 @@ footer .__list i {
   position: relative;
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0px 5px 10px #bcc8c8;
+  transition: 250ms;
   counter-increment: customised-counter;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .working ol li {
+    display: flex;
+    justify-content: space-evenly;
+    border: solid green;
+    width: 30%;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .working ol li {
     display: flex;
     justify-content: space-evenly;
@@ -260,7 +261,14 @@ footer .__list i {
   size: 1.2rem;
   padding: 15px 0 15px 40px;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .working ol li .fas {
+    padding: 0;
+    justify-content: space-between;
+    border: solid red;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .working ol li .fas {
     padding: 0;
     justify-content: space-between;
@@ -283,7 +291,18 @@ footer .__list i {
   font-size: 1.5rem;
   font-weight: bolder;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .restaurants__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .restaurants__container {
     display: flex;
     justify-content: center;
@@ -295,17 +314,36 @@ footer .__list i {
   }
 }
 .restaurants__fig {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
   background-color: white;
   border-radius: 25px;
   height: 250px;
   margin: 0 auto 60px auto;
+  border: solid blue;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
   .restaurants__fig {
     width: 40%;
   }
 }
-.restaurants__img {
+@media (min-width: 416px) and (max-width: 1023px) {
+  .restaurants__fig {
+    width: 40%;
+  }
+}
+.restaurants__fig--new {
+  color: #32b091;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.restaurants__fig--img {
   width: 100%;
   height: 70%;
   object-fit: cover;
@@ -313,29 +351,21 @@ footer .__list i {
   margin: 0;
   padding: 0;
   vertical-align: middle;
+  border: solid green;
 }
-.restaurants figcaption {
-  height: 30%;
-  width: 100%;
+.restaurants__fig--caption {
   display: flex;
-  margin: 0 0;
-  padding: 0;
-}
-.restaurants figcaption div {
-  display: flex;
-  width: auto;
-  height: 100%;
-  margin: auto 0;
-  flex-direction: column;
-  padding: 0 15px;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  margin: auto 0;
+  border: solid red;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
 }
-.restaurants figcaption div .fas {
-  color: #9356DC;
-  font-size: 2rem;
-  margin: 0 0 0 125px;
-}
-.restaurants figcaption h3 {
+.restaurants__fig--caption --h3 {
   padding: 0;
   margin: 0;
   font-family: Roboto, Verdana, sans-serif;
@@ -344,12 +374,35 @@ footer .__list i {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.restaurants figcaption p {
-  padding: 0;
+.restaurants__fig--caption:hover .fas {
+  opacity: 1;
+}
+.restaurants__fig--caption p {
+  border: aqua solid;
+  padding: 0 25px;
   margin: 0;
-  font-family: Roboto, Verdana, sans-serif;
-  font-size: 1.2rem;
-  color: black;
+}
+.restaurants__fig--caption .far {
+  position: absolute;
+  border: solid black;
+  height: 50%;
+  width: 50px;
+  top: 25%;
+  right: 10%;
+  font-size: 1.5rem;
+  color: #9356DC;
+}
+.restaurants__fig--caption .fas {
+  border: solid grey;
+  position: absolute;
+  height: 50%;
+  width: 50px;
+  top: 25%;
+  right: 10%;
+  font-size: 1.5rem;
+  opacity: 0;
+  color: #9356DC;
+  transition: opacity 500ms;
 }
 
 .menu__header {
@@ -383,9 +436,15 @@ footer .__list i {
   width: 100%;
   background-color: transparent;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
   .menu__header--headline h1 {
     font-size: 3rem;
+    padding: 40px 0;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
+  .menu__header--headline h1 {
+    font-size: 2rem;
     padding: 40px 0;
   }
 }
@@ -395,7 +454,13 @@ footer .__list i {
   width: 100%;
   object-fit: cover;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .menu__header--img {
+    height: auto;
+    min-height: 280px;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .menu__header--img {
     height: auto;
     min-height: 280px;
@@ -436,7 +501,13 @@ footer .__list i {
   justify-content: space-around;
   width: 100%;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .menu__headline {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .menu__headline {
     width: 60%;
     margin: auto;
@@ -453,7 +524,12 @@ footer .__list i {
   font-size: 1.5rem;
   font-weight: bolder;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .menu__section {
+    width: 30%;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .menu__section {
     width: 30%;
   }
@@ -555,7 +631,20 @@ footer .__list i {
   top: 50%;
   display: inline;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .menu__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    border: solid red;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .menu__container {
     display: flex;
     justify-content: center;
@@ -600,6 +689,7 @@ footer .__list i {
   bottom: 0;
   background-image: linear-gradient(-30deg, #9356DC, #FF79DA);
   transition: all 500ms;
+  border-radius: 50px;
 }
 .menu__btn .btn:hover {
   transform: scale(1.1);
@@ -608,7 +698,12 @@ footer .__list i {
 .menu__btn .btn:hover::before {
   opacity: 0;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1024px) {
+  .menu__btn .btn {
+    width: 30%;
+  }
+}
+@media (min-width: 416px) and (max-width: 1023px) {
   .menu__btn .btn {
     width: 30%;
   }
