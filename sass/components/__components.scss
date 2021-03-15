@@ -55,67 +55,68 @@
     & ol {
         list-style: none;
         counter-reset: customised-counter;
+        @include flex;
         
     
 
         & li {
             @include p_font;
             white-space: nowrap;
-            //border: solid red;
+            border: solid red;
             align-items: baseline;
             background-color: $background-color;
             border-radius: 25px;
             margin: 25px auto;
             position: relative;
+            padding-right: 5px;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
             transition: 250ms;
+    
+        }  
 
+        &:hover {
+            color: $primary-color;
+        }
+
+        counter-increment: customised-counter;
+
+        &::before {
+            content: counter(customised-counter) ".";
+            color: white;
+            background-color: $primary-color;
+            height: 25px;
+            width: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            align-items: center;
+            text-align: center;
+            left: -10px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            }
+        
+
+        & .fas {
+            border: solid blue;
+            size: $p_size;
+            padding: 15px 0 15px 40px;
+                
             
                 
-            }  
-            &:hover {
-                color: $primary-color;
-            }
+        }
 
-            counter-increment: customised-counter;
-
-            &::before {
-                content: counter(customised-counter) ".";
-                color: white;
-                background-color: $primary-color;
-                height: 25px;
-                width: 25px;
-                padding: 5px;
-                border-radius: 50%;
-                display: inline-block;
-                align-items: center;
-                text-align: center;
-                left: -10px;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                position: absolute;
-              }
-            
-    
-            & .fas {
-                // border: solid blue;
-                size: $p_size;
-                padding: 15px 0 15px 40px;
-                 
-                
-                  
-            }
-    
-            & p {
-                @include p_font;
-                font-weight: normal;  
-                border: solid red;
+        & p {
+            @include p_font;
+            font-weight: normal;  
+            border: solid red;
                 
         }
     
         
-     }
+    }
 
 }      
 
