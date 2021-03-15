@@ -2,25 +2,30 @@
 
 body {
     width: 100%;
-    max-width: $mobile-width;
+    height: fit-content;
+    // max-width: $mobile-width + 10px;
     margin: auto;
-    //border: solid black;
+    border: solid black;
     font-size: 1rem;
-    
+    @include flex;
     @include p_font;
-    @include desktop{
-        min-width: 900px;
-    }
-    @include tablet{
-        max-width: #{$desktop-width};
-        min-width: 900px;
-    }
+    @include flex;
 }
 
+
+
 .loading-page {
-    height: 100px;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: $mobile-width;
+    height: 3000px;
     background-color: $third-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // animation: fadeout 0ms 1s infinite both;
     & .loader {
         width: 50px;
         height: 50px;
@@ -42,8 +47,9 @@ body {
             right: -6px;
             border-radius: 50px;
             border: 6px solid transparent;
-            border-top-color: black;
+            border-top-color: darken($background-color, 20%);
             animation: spin linear 3000ms both;
+            
         }
     }
 }
@@ -53,21 +59,30 @@ body {
     100% { transform: rotate(1080deg)}
 }
 
+@keyframes fadeout { 
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
 .content {
     position: absolute;
     top: 0;
-    left: 0;
+    // left: 0;
     animation: loaded 0ms both;
-    animation-delay: 3000ms;
+    animation-delay: 1000ms;
+    max-width: $mobile-width;
+    // display: block;
+    margin: 0 auto;
+    // text-align: center;
 }
 
 @keyframes loaded{
     0% {
-        transform: translateX(-9999px);
+    transform: translateX(-9999px);
+}
+100% {
+    transform: translateX(0);
     }
-    100% {
-        transform: translateX(0);
-        }
 }
 
 h1 {
@@ -75,20 +90,15 @@ h1 {
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: 0px 5px 5px darken($color: $background-color, $amount: 30%);
     background-color: white;
-    @include desktop{
-        font-size: 3rem;
-        padding: 40px 0;
-    }
-    @include tablet{
-        font-size: 3rem;
-        padding: 40px 0;
-    }
+    
+   
 }
 
 
 
 
 footer {
-    @include footer; 
+    @include footer;
+    
 }
 

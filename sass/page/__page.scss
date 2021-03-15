@@ -17,16 +17,7 @@
         align-items: baseline;
         justify-content: space-around;
         width: 100%;
-        @include desktop{
-            width: 60%;
-            margin: auto
-
-        }
-        @include tablet{
-            width: 60%;
-            margin: auto
-
-        }
+        
 
         & h2 {
             @include h2_font;
@@ -45,12 +36,7 @@
         
     }
     &__section {
-        @include desktop {
-            width: 30%;
-        }
-        @include tablet {
-            width: 30%;
-        }
+        border: solid;
         &--h3 {
             color: black ;
             border-bottom: $third-color solid;
@@ -154,21 +140,7 @@
     }
 
     &__container {
-        @include desktop{
-            @include flex(row);
-            width: 100%;
-            border: solid red;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        @include tablet{
-            @include flex(row);
-            width: 100%;
-            border: solid red;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+        border: solid;
     }
 
     &__btn {
@@ -178,12 +150,7 @@
             @include p_font (white);
             margin: 25px auto;
             width: 50%; 
-            @include desktop{
-                width: 30%;
-            } 
-            @include tablet{
-                width: 30%;
-            }  
+              
         }
     }
 

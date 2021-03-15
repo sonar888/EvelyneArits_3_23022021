@@ -96,9 +96,7 @@
     margin: 0 ;
     width: 100%;
     padding: 15px 0;
-    @include desktop{
-        padding: 25px 0;
-    }
+    
     & h2 {
         @include OMF;
         @include footer_align;     
@@ -106,11 +104,7 @@
 
     & ul {
        @include footer_align;
-       @include desktop{
-           @include flex(row);
-           justify-content: space-around;
-           padding-bottom: 25px;
-       }
+       
     }
 
     & .__list {
@@ -137,19 +131,19 @@
     border-radius: 20px 20px 0 0;
 }
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$mobile-width: 415px;
+// $tablet-width: 768px;
+// $desktop-width: 1024px;
+$mobile-width: 450px;
 
 
-@mixin tablet {
-  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
+// @mixin tablet {
+//   @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
+    // @content;
+//   }
+// }
 
-@mixin desktop {
-    @media (min-width: #{$desktop-width}) {
-      @content;
-    }
-  }
+// @mixin desktop {
+//     @media (min-width: #{$desktop-width}) {
+//       @content;
+//     }
+//   }

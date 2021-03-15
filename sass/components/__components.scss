@@ -55,12 +55,7 @@
     & ol {
         list-style: none;
         counter-reset: customised-counter;
-        @include desktop{
-            @include flex(row);
-        }
-        @include tablet{
-            @include flex(row);
-        }
+        
     
 
         & li {
@@ -76,18 +71,7 @@
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
             transition: 250ms;
 
-            @include desktop{
-                display: flex;
-                justify-content: space-evenly;
-                border: solid green; 
-                width: 30%;
-                
-            }
-            @include tablet{
-                display: flex;
-                justify-content: space-evenly;
-                border: solid green; 
-                width: 30%;
+            
                 
             }  
             &:hover {
@@ -118,16 +102,7 @@
                 // border: solid blue;
                 size: $p_size;
                 padding: 15px 0 15px 40px;
-                @include desktop{
-                  padding: 0;
-                  justify-content: space-between; 
-                  border: solid red; 
-                }
-                @include tablet{
-                    padding: 0;
-                    justify-content: space-between; 
-                    border: solid red; 
-                  } 
+                 
                 
                   
             }
@@ -137,13 +112,13 @@
                 font-weight: normal;  
                 border: solid red;
                 
-            }
+        }
     
         
-        }
+     }
 
-    }      
-}
+}      
+
     
 
 
@@ -155,16 +130,7 @@
     }
 
     &__container {
-        @include desktop{
-            @include flex (row);
-            width: 100%;
-            flex-wrap: wrap;
-        }
-        @include tablet{
-            @include flex (row);
-            width: 100%;
-            flex-wrap: wrap;
-        }
+        border: solid;
         
     }
 
@@ -176,12 +142,7 @@
         height: 250px;
         margin: 0 auto 60px auto;
         border: solid blue;
-        @include desktop{
-            width: 40%;
-        }
-        @include tablet{
-            width: 40%;
-        }
+        
 
 
         &--new {
