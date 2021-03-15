@@ -26,10 +26,13 @@ body {
   transform: translate(-50%, -50%);
   width: 450px;
   height: 3000px;
-  background-color: #99E2D0;
+  background-color: #252d2d;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeout both;
+  animation-duration: 0ms;
+  animation-delay: 3000ms;
 }
 .loading-page .loader {
   width: 50px;
@@ -53,7 +56,8 @@ body {
   border-radius: 50px;
   border: 6px solid transparent;
   border-top-color: #bcc8c8;
-  animation: spin linear 3000ms both;
+  animation: spin linear both;
+  animation-duration: 3000ms;
 }
 
 @keyframes spin {
@@ -76,7 +80,7 @@ body {
   position: absolute;
   top: 0;
   animation: loaded 0ms both;
-  animation-delay: 1000ms;
+  animation-delay: 3000ms;
   max-width: 450px;
   margin: 0 auto;
 }

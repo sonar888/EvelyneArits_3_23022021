@@ -21,11 +21,13 @@ body {
     transform: translate(-50%, -50%);
     width: $mobile-width;
     height: 3000px;
-    background-color: $third-color;
+    background-color: darken($background-color, 80%);
     display: flex;
     align-items: center;
     justify-content: center;
-    // animation: fadeout 0ms 1s infinite both;
+    animation: fadeout both;
+    animation-duration: 0ms;
+    animation-delay: 3000ms;
     & .loader {
         width: 50px;
         height: 50px;
@@ -48,7 +50,8 @@ body {
             border-radius: 50px;
             border: 6px solid transparent;
             border-top-color: darken($background-color, 20%);
-            animation: spin linear 3000ms both;
+            animation: spin linear both;
+            animation-duration: 3000ms;
             
         }
     }
@@ -69,7 +72,7 @@ body {
     top: 0;
     // left: 0;
     animation: loaded 0ms both;
-    animation-delay: 1000ms;
+    animation-delay: 3000ms;
     max-width: $mobile-width;
     // display: block;
     margin: 0 auto;
