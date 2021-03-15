@@ -41,30 +41,24 @@
 
 .working {
 
-    padding: nth($margin_padding, 4) 0;
+    padding: 20px 0;
     width: 100%;
     margin: auto;
     //border: solid blue;
+    
 
     & h2 {
         @include h2_font;
+        margin-top: 20px;
     }
 
     & ol {
         list-style: none;
         counter-reset: customised-counter;
-<<<<<<< Updated upstream
-        
-=======
->>>>>>> Stashed changes
     
 
         & li {
             @include p_font;
-<<<<<<< Updated upstream
-            white-space: nowrap;
-=======
->>>>>>> Stashed changes
             //border: solid red;
             align-items: baseline;
             background-color: $background-color;
@@ -73,14 +67,6 @@
             position: relative;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
-<<<<<<< Updated upstream
-            transition: 250ms;
-
-            
-                
-            }  
-=======
->>>>>>> Stashed changes
             &:hover {
                 color: $primary-color;
             }
@@ -109,43 +95,26 @@
                 // border: solid blue;
                 size: $p_size;
                 padding: 15px 0 15px 40px;
-<<<<<<< Updated upstream
-                 
-=======
->>>>>>> Stashed changes
                 
                   
             }
     
             & p {
                 @include p_font;
-<<<<<<< Updated upstream
-                font-weight: normal;  
-                border: solid red;
-                
-        }
-    }
-    i {
-        //border: solid;
-        width: 50px;
-        //height: 50px;
-        position: absolute;
-        left: 5px;
-        align-content: baseline;
-        // text-decoration: underline;
-        
-     }
-=======
                 font-weight: normal;   
             }
     
         
         }
->>>>>>> Stashed changes
 
-    }      
-}      
+    }
 
+    
+   
+
+    
+      
+}
     
 
 
@@ -237,16 +206,7 @@
                 transition: opacity 500ms;
 
             }
-        }
-    
-                    
-
-                
-
-                
-
-                
-                
+        }            
     }
 }
     
