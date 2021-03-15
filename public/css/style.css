@@ -75,7 +75,7 @@ footer .__list i {
   justify-content: center;
   animation: fadeout both;
   animation-duration: 0ms;
-  animation-delay: 5s;
+  animation-delay: 0s;
 }
 .loading-page .loader {
   width: 50px;
@@ -97,7 +97,7 @@ footer .__list i {
   border: 6px solid transparent;
   border-top-color: #bcc8c8;
   animation: spin linear both;
-  animation-duration: 5s;
+  animation-duration: 0s;
 }
 
 @keyframes spin {
@@ -119,7 +119,7 @@ footer .__list i {
 .content {
   top: 0;
   animation: loaded 0ms both;
-  animation-delay: 5s;
+  animation-delay: 0s;
   max-width: 450px;
   display: flex;
   flex-direction: column;
