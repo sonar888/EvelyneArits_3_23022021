@@ -41,15 +41,13 @@
 
 .working {
 
-    padding: 20px 0;
+    padding: nth($margin_padding, 4) 0;
     width: 100%;
     margin: auto;
     //border: solid blue;
-    
 
     & h2 {
         @include h2_font;
-        margin-top: 20px;
     }
 
     & ol {
@@ -126,7 +124,15 @@
                 border: solid red;
                 
         }
-    
+    }
+    i {
+        //border: solid;
+        width: 50px;
+        //height: 50px;
+        position: absolute;
+        left: 5px;
+        align-content: baseline;
+        // text-decoration: underline;
         
      }
 =======

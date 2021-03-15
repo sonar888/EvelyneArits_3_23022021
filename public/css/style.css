@@ -1,9 +1,9 @@
 /* Error: expected "{".
  *    ,
- * 67 |             white-space: nowrap;
+ * 66 |             white-space: nowrap;
  *    |                                ^
  *    '
- *   sass\components\__components.scss 67:32  @import
+ *   sass\components\__components.scss 66:32  @import
  *   sass\main.scss 4:9                       root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 67 \2502              white-space: nowrap;\d\a    \2502                                 ^\a    \2575 \a   sass\\components\\__components.scss 67:32  @import\a   sass\\main.scss 4:9                       root stylesheet';
+  content: 'Error: expected "{".\a    \2577 \a 66 \2502              white-space: nowrap;\d\a    \2502                                 ^\a    \2575 \a   sass\\components\\__components.scss 66:32  @import\a   sass\\main.scss 4:9                       root stylesheet';
 }
