@@ -75,7 +75,7 @@ footer .__list i {
   justify-content: center;
   animation: fadeout both;
   animation-duration: 0ms;
-  animation-delay: 3s;
+  animation-delay: 0s;
 }
 .loading-page .loader {
   width: 50px;
@@ -97,7 +97,7 @@ footer .__list i {
   border: 6px solid transparent;
   border-top-color: #bcc8c8;
   animation: spin linear both;
-  animation-duration: 3s;
+  animation-duration: 0s;
 }
 
 @keyframes spin {
@@ -119,7 +119,7 @@ footer .__list i {
 .content {
   top: 0;
   animation: loaded 0ms both;
-  animation-delay: 3s;
+  animation-delay: 0s;
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -302,6 +302,7 @@ footer .__list i {
   position: absolute;
   top: 10%;
   right: 10%;
+  padding: 0 5px;
 }
 .restaurants__fig--img {
   width: 100%;
@@ -436,6 +437,7 @@ footer .__list i {
   align-items: baseline;
   justify-content: space-around;
   width: 100%;
+  position: relative;
 }
 .menu__headline h2 {
   font-size: 1.5rem;
@@ -443,15 +445,40 @@ footer .__list i {
   font-family: Shrikhand, Verdana, sans-serif;
   text-align: center;
 }
-.menu__headline .far {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: bolder;
+.menu__headline:hover .fas {
+  opacity: 1;
 }
-.menu__section {
+.menu__headline .far {
+  display: inline-block;
+  position: absolute;
+  border: solid black;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #9356DC;
+}
+.menu__headline .fas {
+  border: solid grey;
+  display: inline-block;
+  position: absolute;
+  border: solid black;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  opacity: 0;
+  color: #9356DC;
+  transition: opacity 500ms;
+}
+
+.menu__container {
   border: solid;
 }
-.menu__section--h3 {
+.menu__container section {
+  border: solid;
+}
+.menu__container section h3 {
   color: black;
   border-bottom: #99E2D0 solid;
   width: 15%;
@@ -460,8 +487,8 @@ footer .__list i {
   text-transform: uppercase;
   margin: 40px 0 30px 0;
 }
-.menu__figure {
-  width: 95%;
+.menu__container section figure {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,18 +499,19 @@ footer .__list i {
   padding: 20px 0 20px 5px;
   margin: 20px auto;
 }
-.menu__figure:hover > .menu__choice--select {
+.menu__container section figure:hover > .menu__choice--select {
   opacity: 1;
   transform: translateX(-100%);
 }
-.menu__figure:hover .menu__choice--price {
+.menu__container section figure:hover .menu__choice--price {
   transform: translateX(-100%);
 }
-.menu__figure:hover .fas {
+.menu__container section figure:hover .fas {
   opacity: 1;
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
-.menu__choice {
+
+figure .choice {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,21 +524,21 @@ footer .__list i {
   margin: 0px auto;
   padding: 0;
 }
-.menu__choice--choice {
+figure .choice__selection {
   margin: 0;
   width: auto;
   max-width: 80%;
   padding-left: 10px;
   font-size: 1rem;
 }
-.menu__choice--choice strong {
+figure .choice__selection strong {
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.25rem;
   font-weight: bolder;
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.menu__choice--price {
+figure .choice__price {
   width: 10%;
   padding-right: 10px;
   position: absolute;
@@ -518,38 +546,33 @@ footer .__list i {
   bottom: -50%;
   font-weight: bold;
   text-align: bottom;
-  transform: translateX(0);
-  transition: transform 500ms;
-  transition-delay: 100ms;
 }
-.menu__choice--select {
-  background-color: #99E2D0;
-  height: 5%;
-  border-radius: 0 25px 25px 0;
-  width: 15%;
-  right: -15%;
-  text-align: center;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  transform: translateX(0);
-  transition: transform 500ms;
+figure .choice__select .fas {
+  color: black;
 }
-.menu__choice--select .fas {
-  color: white;
-  background-color: #99E2D0;
-  border-radius: 50%;
-  opacity: 0;
-  transition: transform 500ms;
-  transform: rotate(-180deg);
-  padding: 0;
-  font-size: 2rem;
-  top: 50%;
-  display: inline;
+
+.fade-in {
+  animation: fadein 1500ms both;
 }
-.menu__container {
-  border: solid;
+.fade-in:nth-child(2) {
+  animation-delay: 0ms;
+}
+.fade-in:nth-child(3) {
+  animation-delay: 250ms;
+}
+.fade-in:nth-child(4) {
+  animation-delay: 500ms;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
 }
 .menu__btn {
   display: flex;
