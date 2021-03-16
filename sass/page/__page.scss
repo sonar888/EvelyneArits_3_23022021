@@ -76,27 +76,28 @@
             
         }
 
-        & figure {
+        & .figure {
             width: 90%;
             // border: solid red;
             @include flex(row);
             border-radius: 25px;
             background-color: white;
-            padding: 20px 0 20px 5px;
-            margin: 20px auto;
+            // padding: 20px 0 20px 5px;
+            // margin: 20px auto;
 
-            &:hover > .menu__choice--select {
-                opacity: 1;
-                transform: translateX(-100%);
+            &:hover > .select {
+                animation: hover 500ms forwards linear;
             }
 
-            &:hover .menu__choice--price {
-                transform: translateX(-100%);
+            &:hover .choice__price {
+                transform: translateX(-115%);
+                transition-duration: 600ms;
+                transition-delay: 50ms;
             }
 
             &:hover .fas {
-                opacity: 1; 
-                transform: rotate(360deg);
+                animation: hover_2 500ms  100ms both;
+                animation: rot 500ms both;
             }
                 
         }
@@ -104,23 +105,26 @@
 
 }
 
-figure {
+.figure {
+    border: solid blue;
+    display: flex;
+    align-items: baseline;
     
     & .choice {
         @include flex (row);
         justify-content: space-between;
         width: 100%;
-        display: inline;
+        // display: inline;
         position: relative;
-        // border: solid purple;
+        border: solid purple;
         margin: 0px auto;
         padding: 0;
         
         &__selection {
-            // border: solid red;
+            border: solid red;
             margin: 0;
             width: auto;
-            max-width: 80%;
+            max-width: 100%;
             padding-left: 10px;
             font-size: 1rem;
             & strong {
@@ -128,46 +132,101 @@ figure {
             }
         }
         &__price {
-            // border: solid green;
+            // border: solid red;
             width: 10%;
-            padding-right: 10px;
+            padding: 10px 10px;
             // height: 100%;
             position: absolute;
-            right: 0;
+            right: 0%;
             bottom: -50%;
             font-weight: bold;
             text-align: bottom;
             
         }
-        &__select {  
-            
-            
-            & .fas {
-                color: black;
-               
-                
-            }  
-        }
-
+    }
+    & .select {  
+        border: solid green;
+        height: 100%;
+        width: 15%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0 25px 25px 0;
+        position: absolute;
+        right: 0%;
+        background-color: $third-color;
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
         
+        
+        
+        
+        
+        & .fas {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            font-size: 1.5rem;
+            
+            
+            
+            
+        }  
+    }
+}
+
+@keyframes hover_2{
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes rot{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
 
+
+@keyframes hover{
+    0% {
+        // transform: translateX(0%);
+        transform: scaleX(0);
+        
+    }
+    100% {
+        // transform: translateX(-100%);
+        transform: scaleX(1);
+    }
+}
+
+
+
 .fade-in {
-    animation: fadein 1500ms both;
-    &:nth-child(2){
-        animation-delay: 0ms;
+    animation: fadein 0ms both;
+    animation-delay: 0ms;
+    // &:nth-child(2){
+    //     animation-delay: 1000ms;
         
-    }
-    &:nth-child(3){
-        animation-delay: 250ms;
+    // }
+    // &:nth-child(3){
+    //     animation-delay: 1250ms;
         
-    }
-    &:nth-child(4){
-        animation-delay: 500ms;
+    // }
+    // &:nth-child(4){
+    //     animation-delay: 1500ms;
         
-    }
+    // }
 }
 
 
