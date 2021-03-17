@@ -83,6 +83,13 @@
                 
             }
 
+            &:hover .choice__selection {
+                max-width: 80%;
+                white-space: nowrap;
+                overflow: hidden;
+        
+            }
+
             &:hover .choice__price {
                 transform: translateX(-120%);
                 transition-duration: 600ms;
@@ -109,7 +116,6 @@
     width: 90%;
     border-radius: 25px;
     background-color: white;
-   
     margin: 20px auto;
     
     & .choice {
@@ -122,13 +128,14 @@
         margin: 0px auto;
         padding: 10px 0;
         position: relative;
+
         
         &__selection {
             border: solid red;
             margin: 0;
             width: auto;
             max-width: 100%;
-            padding-left: 10px;
+            // padding-left:px;
             font-size: 1rem;
             & strong {
                 @include h3_font;
@@ -213,6 +220,10 @@
     }
     &:nth-child(4){
         animation-delay: 1500ms;
+        
+    }
+    &:nth-child(5){
+        animation-delay: 1750ms;
         
     }
 }

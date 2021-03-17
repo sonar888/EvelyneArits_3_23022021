@@ -337,6 +337,7 @@ footer .__list i {
 }
 .restaurants__fig--caption:hover .fas {
   opacity: 1;
+  cursor: pointer;
 }
 .restaurants__fig--caption p {
   border: aqua solid;
@@ -493,6 +494,11 @@ footer .__list i {
 .menu__container section .figure:hover > .select {
   animation: hover 300ms forwards linear;
 }
+.menu__container section .figure:hover .choice__selection {
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .menu__container section .figure:hover .choice__price {
   transform: translateX(-120%);
   transition-duration: 600ms;
@@ -530,7 +536,6 @@ footer .__list i {
   margin: 0;
   width: auto;
   max-width: 100%;
-  padding-left: 10px;
   font-size: 1rem;
 }
 .figure .choice__selection strong {
@@ -598,6 +603,9 @@ footer .__list i {
 }
 .fade-in:nth-child(4) {
   animation-delay: 1500ms;
+}
+.fade-in:nth-child(5) {
+  animation-delay: 1750ms;
 }
 
 @keyframes fadein {
