@@ -488,32 +488,28 @@ footer .__list i {
   margin: 40px 0 30px 0;
 }
 .menu__container section .figure {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: row;
-  border-radius: 25px;
-  background-color: white;
+  cursor: pointer;
 }
 .menu__container section .figure:hover > .select {
-  animation: hover 500ms forwards linear;
+  animation: hover 300ms forwards linear;
 }
 .menu__container section .figure:hover .choice__price {
-  transform: translateX(-115%);
+  transform: translateX(-120%);
   transition-duration: 600ms;
   transition-delay: 50ms;
 }
 .menu__container section .figure:hover .fas {
-  animation: hover_2 500ms 100ms both;
   animation: rot 500ms both;
 }
 
 .figure {
   border: solid blue;
   display: flex;
-  align-items: baseline;
+  height: 100%;
+  width: 90%;
+  border-radius: 25px;
+  background-color: white;
+  margin: 20px auto;
 }
 .figure .choice {
   display: flex;
@@ -526,7 +522,8 @@ footer .__list i {
   position: relative;
   border: solid purple;
   margin: 0px auto;
-  padding: 0;
+  padding: 10px 0;
+  position: relative;
 }
 .figure .choice__selection {
   border: solid red;
@@ -544,47 +541,38 @@ footer .__list i {
   padding-bottom: 0px;
 }
 .figure .choice__price {
+  border: solid red;
   width: 10%;
-  padding: 10px 10px;
+  padding-right: 5px;
   position: absolute;
-  right: 0%;
-  bottom: -50%;
+  right: -15%;
+  bottom: -10px;
   font-weight: bold;
-  text-align: bottom;
 }
 .figure .select {
   border: solid green;
-  height: 100%;
-  width: 15%;
+  width: 20%;
   padding: 0;
   margin: 0;
   border-radius: 0 25px 25px 0;
-  position: absolute;
-  right: 0%;
+  position: relative;
   background-color: #99E2D0;
   transform: scaleX(0);
   transform-origin: 100% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .figure .select .fas {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
+  height: 2rem;
+  font-size: 2rem;
+  transform: rotate(90deg);
 }
 
-@keyframes hover_2 {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
 @keyframes rot {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   100% {
     transform: rotate(360deg);
@@ -599,8 +587,17 @@ footer .__list i {
   }
 }
 .fade-in {
-  animation: fadein 0ms both;
-  animation-delay: 0ms;
+  animation: fadein 1500ms both;
+  animation-delay: 1000ms;
+}
+.fade-in:nth-child(2) {
+  animation-delay: 1000ms;
+}
+.fade-in:nth-child(3) {
+  animation-delay: 1250ms;
+}
+.fade-in:nth-child(4) {
+  animation-delay: 1500ms;
 }
 
 @keyframes fadein {
