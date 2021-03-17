@@ -6,12 +6,17 @@ body {
     max-width: $mobile-width;
     margin: auto;
     border: solid red;
-    // display: flex;
-    // flex-direction: column;
     font-size: 1rem;
     @include flex;
     @include p_font;
-    // @include flex;
+    @include tablet {
+        max-width: $desktop-width - 1px;
+    }
+    @include desktop {
+        max-width: 100%;
+    }
+    
+    
 }
 
 
@@ -28,11 +33,10 @@ h1 {
 
 
 footer {
-    @include footer;
-    
+    @include footer;  
 }
 
-$timing: 3s;
+$timing: 0s;
 
 
 .loading-page {
@@ -40,7 +44,7 @@ $timing: 3s;
     left: 50%;
     position: fixed;
     transform: translate(-50%, -50%);
-    width: $mobile-width;
+    width: 100%;
     height: 3000px;
     background-color: darken($background-color, 80%);
     display: flex;
@@ -49,15 +53,18 @@ $timing: 3s;
     animation: fadeout both;
     animation-duration: 0ms;
     animation-delay: $timing;
+    // @include tablet {
+    //     width: $tablet-width;
+    // }
     & .loader {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         // display: inline-block;
         // vertical-align: middle;
         // position: relative;
         &--quart {
             position: relative;
-            border-radius: 50px;
+            border-radius: 50%;
             border: 6px solid $background-color;
 
         }
@@ -68,7 +75,7 @@ $timing: 3s;
             left: -6px;
             bottom: -6px;
             right: -6px;
-            border-radius: 50px;
+            border-radius: 50%;
             border: 6px solid transparent;
             border-top-color: darken($background-color, 20%);
             animation: spin linear both;
@@ -94,19 +101,23 @@ $timing: 3s;
     // left: 0;
     animation: loaded 0ms both;
     animation-delay: $timing;
-    max-width: $mobile-width;
+    min-width: $mobile-width;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     // text-align: center;
+    @include tablet {
+        max-width: $desktop-width - 10px;
+        margin: auto;
+    }
 }
 
 @keyframes loaded{
     0% {
-    transform: translateX(-9999px);
+    opacity: 0;
 }
 100% {
-    transform: translateX(0);
+    opacity: 1;
     }
 }
 

@@ -104,6 +104,16 @@
 
     & ul {
        @include footer_align;
+       @include tablet {
+           display: flex;
+           
+           width: 80%;
+           margin: auto;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           
+
+       }
        
     }
 
@@ -112,6 +122,11 @@
         padding: 7px;
         display: flex;
         flex-direction: row;
+        @include tablet() {
+            width: 40%;
+            
+            
+        }
         & i {
             width: 30px;
             padding-right: 10px;
@@ -131,22 +146,22 @@
     border-radius: 20px 20px 0 0;
 }
 
-// $tablet-width: 768px;
-// $desktop-width: 1024px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 $mobile-width: 450px;
 
 
-// @mixin tablet {
-//   @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
-    // @content;
-//   }
-// }
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
 
-// @mixin desktop {
-//     @media (min-width: #{$desktop-width}) {
-//       @content;
-//     }
-//   }
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
 
 @mixin center {
     position: absolute;
