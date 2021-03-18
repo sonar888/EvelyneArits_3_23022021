@@ -469,7 +469,7 @@ footer .__list i {
 }
 @media (min-width: 999px) {
   .restaurants__fig--caption --h3 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 }
 .restaurants__fig--caption:hover .fas {
@@ -743,6 +743,7 @@ footer .__list i {
   position: relative;
 }
 .figure .choice__selection {
+  padding-left: 10px;
   margin: 0;
   width: auto;
   max-width: 100%;
@@ -757,7 +758,7 @@ footer .__list i {
 }
 @media (min-width: 999px) {
   .figure .choice__selection strong {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 }
 .figure .choice__price {
@@ -769,7 +770,7 @@ footer .__list i {
   font-weight: bold;
 }
 .figure .select {
-  width: 20%;
+  width: 25%;
   padding: 0;
   margin: 0;
   border-radius: 0 25px 25px 0;

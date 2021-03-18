@@ -38,8 +38,8 @@
     padding-top: $padding;
     padding-bottom: $padding;
     @include desktop(){
-        font-size: 1.75rem;      
-      }
+        font-size: 1.40rem;      
+      } 
 }
 @mixin OMF {
     font-family: Shrikhand, Verdana, sans-serif;
