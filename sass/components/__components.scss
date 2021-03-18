@@ -44,7 +44,8 @@
     padding: 20px 0;
     width: 100%;
     margin: auto;
-    //border: solid blue;
+    // border: solid blue;
+    
     
 
     & h2 {
@@ -55,18 +56,51 @@
     & ol {
         list-style: none;
         counter-reset: customised-counter;
+        
+        @include desktop {
+            display: flex;
+            
+        }
+        @include tablet {
+            display: flex;
+            
+        }
+        @include breakpoint {
+            @include flex;
+
+        }
     
 
         & li {
             @include p_font;
-            //border: solid red;
+            // border: solid red;
             align-items: baseline;
+            @include flex(row);
+            justify-content: space-evenly;
             background-color: $background-color;
             border-radius: 25px;
             margin: 25px auto;
+            padding: 0 25px;
             position: relative;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
+            width: fit-content;
+            @include desktop {
+                width: 25%;
+            }
+            @include tablet {
+                width: 70%;
+                padding: 0;
+                max-width: auto;
+            }
+            @include breakpoint {
+                width: 70%;
+                padding: 0;
+                max-width: auto;
+    
+            }
+            
+            
             &:hover {
                 color: $primary-color;
             }
@@ -107,13 +141,7 @@
         
         }
 
-    }
-
-    
-   
-
-    
-      
+    }      
 }
     
 
@@ -127,6 +155,23 @@
 
     &__container {
         border: solid;
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        @include breakpoint {
+            @include flex;
+
+        }
         
     }
 
@@ -138,6 +183,21 @@
         height: 250px;
         margin: 0 auto 60px auto;
         border: solid blue;
+        @include desktop {
+            width: 40%;
+            
+            margin: 15px 0;
+        }
+        @include tablet {
+            width: 40%;
+            
+            margin: 15px 0;
+        }
+        @include breakpoint {
+            width: 70%;
+            margin: 20px 0;
+
+        }
         
 
 

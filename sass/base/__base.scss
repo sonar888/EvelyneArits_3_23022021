@@ -3,14 +3,14 @@
 body {
     width: 100%;
     height: 100%;
-    max-width: $mobile-width;
+    max-width: $tablet-width;
     margin: auto;
-    border: solid red;
+    // border: solid red;
     font-size: 1rem;
     @include flex;
     @include p_font;
     @include tablet {
-        max-width: $desktop-width - 1px;
+        max-width: $content-width - 1px;
     }
     @include desktop {
         max-width: 100%;
@@ -33,7 +33,8 @@ h1 {
 
 
 footer {
-    @include footer;  
+    @include footer;
+    margin: auto; 
 }
 
 $timing: 0s;
@@ -105,9 +106,13 @@ $timing: 0s;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    // text-align: center;
+    text-align: center;
     @include tablet {
-        max-width: $desktop-width - 10px;
+        max-width: $tablet-width;
+        margin: auto;
+    }
+    @include desktop {
+        max-width: $content-width;
         margin: auto;
     }
 }

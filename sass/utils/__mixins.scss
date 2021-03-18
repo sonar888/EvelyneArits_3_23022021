@@ -10,6 +10,14 @@
     //border: solid black;
     margin: 0 auto;
     padding: 10px 0;
+    @include tablet(){
+        padding: 15px 0;
+        font-size: 2.5rem;
+    }
+    @include desktop(){
+        padding: 20px 0;
+        font-size: 3rem;
+    }
     
 }
 
@@ -17,6 +25,9 @@
     //font-family: Roboto, Verdana, sans-serif;
     font-size: 1.5rem;
     font-weight: bolder;
+    @include desktop(){
+      font-size: 2rem;      
+    } 
     
 }
 
@@ -26,11 +37,17 @@
     font-weight: bolder;
     padding-top: $padding;
     padding-bottom: $padding;
+    @include desktop(){
+        font-size: 1.75rem;      
+      }
 }
 @mixin OMF {
     font-family: Shrikhand, Verdana, sans-serif;
     font-size: 1.1rem;
     font-weight: normal;
+    @include desktop(){
+        font-size: 1.5rem;      
+      }
 }
 
 @mixin p_font ($color: black,){
@@ -96,24 +113,32 @@
     margin: 0 ;
     width: 100%;
     padding: 15px 0;
+    @include desktop() {
+        height: 150px;
+        
+        }
     
     & h2 {
         @include OMF;
-        @include footer_align;     
+        @include footer_align;
+           
     }
 
     & ul {
        @include footer_align;
        @include tablet {
            display: flex;
-           
            width: 80%;
            margin: auto;
            flex-wrap: wrap;
            justify-content: space-between;
            
-
        }
+       @include desktop() {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        }
        
     }
 
@@ -139,16 +164,19 @@
 @mixin footer_align {
     width: 100%;
     padding: 0;
-    margin-left: 20px; 
+    margin-left: 20px;
+    
 }
 
 @mixin radius {
     border-radius: 20px 20px 0 0;
 }
 
-$tablet-width: 768px;
+$tablet-width: 700px;
 $desktop-width: 1024px;
 $mobile-width: 450px;
+$content-width: 1324px;
+$breakpoint: 700px;
 
 
 @mixin tablet {
@@ -169,3 +197,18 @@ $mobile-width: 450px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin breakpoint ($breakpoint: 700px) {
+    @media (min-width: $breakpoint) and (max-width: $breakpoint) {
+        @content;
+      } 
+}
+
+@mixin flex ($direction:column) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: $direction;
+}
+
