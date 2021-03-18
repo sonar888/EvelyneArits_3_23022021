@@ -131,7 +131,7 @@
         margin: auto;
         flex-wrap: wrap;
         justify-content: space-between;
-        border: solid red;
+        // border: solid red;
     }
 
     @include breakpoint($min-breakpoint: 1001px, $max-breakpoint:9999px){
@@ -165,7 +165,7 @@
         flex-direction: row;
         @include breakpoint($min-breakpoint: 600px, $max-breakpoint: 9999px){
             width: 40%;
-            border: solid blue;
+            // border: solid blue;
     
         }
         @include breakpoint($min-breakpoint: 1001px, $max-breakpoint:9999px){

@@ -22,7 +22,7 @@
     }
 
     &__headline {
-        border: green solid;
+        // border: green solid;
         @include flex (row);
         align-items: baseline;
         justify-content: space-around;
@@ -44,7 +44,7 @@
         & .far {
             display: inline-block;
             position: absolute;
-            border: solid black;
+            // border: solid black;
             top: 50%;
             right: 10%;
             transform: translate(-50%, -50%);
@@ -53,10 +53,10 @@
         }
 
         & .fas {
-            border: solid grey;
+            // border: solid grey;
             display: inline-block;
             position: absolute;
-            border: solid black;
+            // border: solid black;
             top: 50%;
             right: 10%;
             transform: translate(-50%, -50%);
@@ -71,14 +71,14 @@
 }
 
 .menu__container {
-    border: solid;
+    // border: solid;
     @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
         display: flex;
         justify-content: space-around;
     }
 
     & section {
-        border: solid;
+        // border: solid;
         @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
             padding-right: 10px;
             padding-left: 0;
@@ -129,7 +129,7 @@
 }
 
 .figure {
-    border: solid blue;
+    // border: solid blue;
     display: flex;
     // align-items: baseline;
     // height: 100%;
@@ -161,14 +161,14 @@
         width: 100%;
         // display: inline;
         position: relative;
-        border: solid purple;
+        // border: solid purple;
         margin: 0px auto;
         padding: 10px 0;
         position: relative;
 
         
         &__selection {
-            border: solid red;
+            // border: solid red;
             margin: 0;
             width: auto;
             max-width: 100%;
@@ -179,7 +179,7 @@
             }
         }
         &__price {
-            border: solid red;
+            // border: solid red;
             width: 10%;
             padding-right: 5px;
             // height: 100%;
@@ -192,7 +192,7 @@
         }
     }
     & .select {  
-        border: solid green;
+        // border: solid green;
         width: 20%;
         padding: 0;
         margin: 0;

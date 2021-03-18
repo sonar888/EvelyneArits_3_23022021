@@ -180,7 +180,7 @@
     }
 
     &__container {
-        border: solid;
+        // border: solid;
         // @include desktop {
         //     display: flex;
         //     flex-wrap: wrap;
@@ -215,7 +215,7 @@
         border-radius: 25px;
         height: 250px;
         margin: 0 auto 60px auto;
-        border: solid blue;
+        // border: solid blue;
         @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             width: 40%;
 
@@ -251,12 +251,12 @@
             margin: 0;
             padding: 0;
             vertical-align: middle;
-            border: solid green;
+            // border: solid green;
         }
         &--caption {
             @include flex(row);
             margin: auto 0;
-            border: solid red;
+            // border: solid red;
             width: 100%;
             justify-content: space-between;
             position: relative;
@@ -271,7 +271,7 @@
             }
 
             & p {
-                border: aqua solid;
+                // border: aqua solid;
                 padding: 0 25px;
                 margin: 0;
                 
@@ -279,7 +279,7 @@
 
             & .far {
                 position: absolute;
-                border: solid black;
+                // border: solid black;
                 right: 0%;
                 padding-right: 10px;
                 font-size: 1.5rem;
@@ -295,7 +295,7 @@
             }
 
             & .fas {
-                border: solid grey;
+                // border: solid grey;
                 position: absolute;
                 right: 0%;
                 padding-right: 10px;

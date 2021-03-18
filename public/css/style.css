@@ -76,7 +76,6 @@ footer ul {
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: solid red;
   }
 }
 @media (min-width: 1001px) and (max-width: 9999px) {
@@ -95,7 +94,6 @@ footer .__list {
 @media (min-width: 600px) and (max-width: 9999px) {
   footer .__list {
     width: 40%;
-    border: solid blue;
   }
 }
 @media (min-width: 1001px) and (max-width: 9999px) {
@@ -407,9 +405,6 @@ footer .__list i {
     font-size: 2rem;
   }
 }
-.restaurants__container {
-  border: solid;
-}
 @media (min-width: 600px) and (max-width: 9999px) {
   .restaurants__container {
     display: flex;
@@ -429,7 +424,6 @@ footer .__list i {
   border-radius: 25px;
   height: 250px;
   margin: 0 auto 60px auto;
-  border: solid blue;
 }
 @media (min-width: 600px) and (max-width: 9999px) {
   .restaurants__fig {
@@ -452,7 +446,6 @@ footer .__list i {
   margin: 0;
   padding: 0;
   vertical-align: middle;
-  border: solid green;
 }
 .restaurants__fig--caption {
   display: flex;
@@ -461,7 +454,6 @@ footer .__list i {
   margin: 0 auto;
   flex-direction: row;
   margin: auto 0;
-  border: solid red;
   width: 100%;
   justify-content: space-between;
   position: relative;
@@ -485,13 +477,11 @@ footer .__list i {
   cursor: pointer;
 }
 .restaurants__fig--caption p {
-  border: aqua solid;
   padding: 0 25px;
   margin: 0;
 }
 .restaurants__fig--caption .far {
   position: absolute;
-  border: solid black;
   right: 0%;
   padding-right: 10px;
   font-size: 1.5rem;
@@ -508,7 +498,6 @@ footer .__list i {
   }
 }
 .restaurants__fig--caption .fas {
-  border: solid grey;
   position: absolute;
   right: 0%;
   padding-right: 10px;
@@ -621,7 +610,6 @@ footer .__list i {
   }
 }
 .menu__headline {
-  border: green solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -649,7 +637,6 @@ footer .__list i {
 .menu__headline .far {
   display: inline-block;
   position: absolute;
-  border: solid black;
   top: 50%;
   right: 10%;
   transform: translate(-50%, -50%);
@@ -657,10 +644,8 @@ footer .__list i {
   color: #9356DC;
 }
 .menu__headline .fas {
-  border: solid grey;
   display: inline-block;
   position: absolute;
-  border: solid black;
   top: 50%;
   right: 10%;
   transform: translate(-50%, -50%);
@@ -670,17 +655,11 @@ footer .__list i {
   transition: opacity 500ms;
 }
 
-.menu__container {
-  border: solid;
-}
 @media (min-width: 1000px) and (max-width: 9999px) {
   .menu__container {
     display: flex;
     justify-content: space-around;
   }
-}
-.menu__container section {
-  border: solid;
 }
 @media (min-width: 1000px) and (max-width: 9999px) {
   .menu__container section {
@@ -720,7 +699,6 @@ footer .__list i {
 }
 
 .figure {
-  border: solid blue;
   display: flex;
   width: 90%;
   border-radius: 25px;
@@ -760,13 +738,11 @@ footer .__list i {
   justify-content: space-between;
   width: 100%;
   position: relative;
-  border: solid purple;
   margin: 0px auto;
   padding: 10px 0;
   position: relative;
 }
 .figure .choice__selection {
-  border: solid red;
   margin: 0;
   width: auto;
   max-width: 100%;
@@ -785,7 +761,6 @@ footer .__list i {
   }
 }
 .figure .choice__price {
-  border: solid red;
   width: 10%;
   padding-right: 5px;
   position: absolute;
@@ -794,7 +769,6 @@ footer .__list i {
   font-weight: bold;
 }
 .figure .select {
-  border: solid green;
   width: 20%;
   padding: 0;
   margin: 0;
