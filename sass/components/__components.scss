@@ -44,6 +44,7 @@
     padding: 20px 0;
     width: 100%;
     margin: auto;
+    background-color: white;
     // border: solid blue;
     
     
@@ -51,24 +52,29 @@
     & h2 {
         @include h2_font;
         margin-top: 20px;
+        text-align: left;
     }
 
     & ol {
         list-style: none;
         counter-reset: customised-counter;
-        
-        @include desktop {
-            display: flex;
-            
-        }
-        @include tablet {
-            display: flex;
-            
-        }
-        @include breakpoint {
-            @include flex;
 
+        @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
+            display: flex;
+            justify-content: center;
         }
+        
+        // @include desktop {
+        //     display: flex;
+            
+        // }
+        // @include tablet {
+        //     display: flex;
+            
+        // }
+        // @include breakpoint ($min-breakpoint: 801px, $max-breakpoint: 2000px) {
+        //     @include flex;
+        // }
     
 
         & li {
@@ -85,20 +91,28 @@
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
             width: fit-content;
-            @include desktop {
+            @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
                 width: 25%;
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0 15px;
+                margin: 0 auto;
+                
+                
+
             }
-            @include tablet {
-                width: 70%;
-                padding: 0;
-                max-width: auto;
-            }
-            @include breakpoint {
-                width: 70%;
-                padding: 0;
-                max-width: auto;
+            
+            // @include tablet {
+            //     width: 70%;
+            //     padding: 0;
+            //     max-width: auto;
+            // }
+            // @include breakpoint ($min-breakpoint: $mobile-width, $max-breakpoint: 665px){
+            //     width: 70%;
+            //     padding: 0;
+            //     max-width: auto;
     
-            }
+            // }
             
             
             &:hover {
@@ -129,13 +143,24 @@
                 // border: solid blue;
                 size: $p_size;
                 padding: 15px 0 15px 40px;
+                @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
+                    padding: 0 5px;
+    
+                }
                 
                   
             }
     
             & p {
                 @include p_font;
-                font-weight: normal;   
+                font-weight: normal;
+                @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
+                    padding: 0 5px;
+                    text-align: center;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+    
+                }   
             }
     
         
@@ -151,27 +176,35 @@
     padding: 10px 0;
     & h2 {
         @include h2_font;
+        text-align: left;
     }
 
     &__container {
         border: solid;
-        @include desktop {
+        // @include desktop {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     align-items: center;
+        //     justify-content: space-evenly;
+        // }
+        @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-evenly;
-        }
-
-        @include tablet {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        @include breakpoint {
-            @include flex;
 
         }
+
+        // @include tablet {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     align-items: center;
+        //     justify-content: space-evenly;
+        // }
+        // @include breakpoint {
+        //     @include flex;
+
+        // }
         
     }
 
@@ -183,21 +216,20 @@
         height: 250px;
         margin: 0 auto 60px auto;
         border: solid blue;
-        @include desktop {
+        @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             width: 40%;
-            
-            margin: 15px 0;
-        }
-        @include tablet {
-            width: 40%;
-            
-            margin: 15px 0;
-        }
-        @include breakpoint {
-            width: 70%;
-            margin: 20px 0;
 
         }
+        // @include tablet {
+        //     width: 40%;
+            
+        //     margin: 15px 0;
+        // }
+        // @include breakpoint {
+        //     width: 70%;
+        //     margin: 20px 0;
+
+        // }
         
 
 
@@ -242,30 +274,45 @@
                 border: aqua solid;
                 padding: 0 25px;
                 margin: 0;
+                
             }
 
             & .far {
                 position: absolute;
                 border: solid black;
-                height: 50%;
-                width: 50px;
-                top: 25%;
-                right: 10%;
+                right: 0%;
+                padding-right: 10px;
                 font-size: 1.5rem;
                 color: $primary-color;
+                @include breakpoint($min-breakpoint:450px, $max-breakpoint:600px){
+                    padding-right: 100px;
+                }
+                @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
+                    padding-right: 100px;
+                    
+    
+                }
             }
 
             & .fas {
                 border: solid grey;
                 position: absolute;
-                height: 50%;
-                width: 50px;
-                top: 25%;
-                right: 10%;
+                right: 0%;
+                padding-right: 10px;
                 font-size: 1.5rem;
                 opacity: 0;
                 color: $primary-color;
                 transition: opacity 500ms;
+                @include breakpoint($min-breakpoint:450px, $max-breakpoint:600px){
+                    padding-right: 100px;
+                    
+    
+                }
+                @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
+                    padding-right: 100px;
+                    
+    
+                }
 
             }
         }            

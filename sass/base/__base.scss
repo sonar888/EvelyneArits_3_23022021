@@ -3,18 +3,13 @@
 body {
     width: 100%;
     height: 100%;
-    max-width: $tablet-width;
+    max-width: 1500px;
     margin: auto;
     // border: solid red;
     font-size: 1rem;
     @include flex;
     @include p_font;
-    @include tablet {
-        max-width: $content-width - 1px;
-    }
-    @include desktop {
-        max-width: 100%;
-    }
+   
     
     
 }
@@ -34,7 +29,16 @@ h1 {
 
 footer {
     @include footer;
-    margin: auto; 
+    margin: auto;
+     
+}
+
+.footer {
+    @include breakpoint($min-breakpoint:650px, $max-breakpoint:1000px){
+        // min-height: 100px;
+        max-width: 650px;
+        
+    }
 }
 
 $timing: 0s;
@@ -102,19 +106,19 @@ $timing: 0s;
     // left: 0;
     animation: loaded 0ms both;
     animation-delay: $timing;
-    min-width: $mobile-width;
+    // min-width: $mobile-width;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    @include tablet {
-        max-width: $tablet-width;
-        margin: auto;
-    }
-    @include desktop {
-        max-width: $content-width;
-        margin: auto;
-    }
+    // @include tablet {
+    //     max-width: $tablet-width;
+    //     margin: auto;
+    // }
+    // @include desktop {
+    //     max-width: $content-width;
+    //     margin: auto;
+    // }
 }
 
 @keyframes loaded{

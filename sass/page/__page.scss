@@ -1,15 +1,25 @@
 // Menu pages layout
 
-
+.--bckgrd {
+    background-color: darken($background-color, 80%);
+}
 
 .menu {
     background-color: $background-color;
     padding: 20px 0;
-    margin: -55px 0;
+    margin: -55px 0 0;
     border-radius: $menu_radius $menu_radius 0 0;
     // border: solid red;
     // @include flex;
     width: 100%;
+    @include breakpoint($min-breakpoint:650px, $max-breakpoint:1000px){
+        // min-height: 100px;
+        max-width: 650px;
+        border-radius: $menu_radius;
+    }
+    @include breakpoint($min-breakpoint:1500px, $max-breakpoint:9999px){
+        border-radius: $menu_radius;
+    }
 
     &__headline {
         border: green solid;
@@ -62,9 +72,19 @@
 
 .menu__container {
     border: solid;
+    @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
+        display: flex;
+        justify-content: space-around;
+    }
 
     & section {
         border: solid;
+        @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
+            padding-right: 10px;
+            padding-left: 0;
+            margin-right: 10px;
+            width: 30%;
+        }
         & h3 {
             color: black ;
             border-bottom: $third-color solid;
@@ -112,11 +132,28 @@
     border: solid blue;
     display: flex;
     // align-items: baseline;
-    height: 100%;
+    // height: 100%;
     width: 90%;
     border-radius: 25px;
     background-color: white;
     margin: 20px auto;
+    height: 75px;
+    @include breakpoint($min-breakpoint:0px, $max-breakpoint:320px){
+        height: auto;
+    }
+    @include breakpoint($min-breakpoint:450px, $max-breakpoint:2000px){
+        min-height: 100px;
+    }
+    @include breakpoint($min-breakpoint:650px, $max-breakpoint:1000px){
+        max-width: 510px;
+    }
+
+    @include breakpoint($min-breakpoint:1001px, $max-breakpoint: 9999px){
+        height: auto;
+        margin-left: 0;
+        width: 100%;
+        max-height: 100px;
+    }
     
     & .choice {
         @include flex (row);
@@ -256,7 +293,8 @@
         @include btn;
         @include p_font (white);
         margin: 25px auto;
-        width: 50%; 
+        width: 50%;
+        max-width: 300px; 
             
     }
 }

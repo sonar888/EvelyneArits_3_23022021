@@ -4,10 +4,12 @@
     position: relative;
     background-color: white;
     &--headline {
-        @include flex (row);
-        align-items: baseline;
+        display: flex;
+        align-items: center;
+        
         //border: solid green;
         position: relative;
+        height: 100px;
 
         & .fa-arrow-left {
             // border: solid blue;
@@ -31,6 +33,12 @@
         max-height: 280px;
         width:  100%;
         object-fit: cover;
+        vertical-align: middle;
+        margin: 0;
+        @include breakpoint($min-breakpoint: 101px, $max-breakpoint:5000px){
+            max-height: 400px;
+
+        }
        
     }
 }
