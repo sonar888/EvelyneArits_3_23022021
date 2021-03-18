@@ -127,7 +127,7 @@
        @include footer_align;
        @include breakpoint($min-breakpoint: 600px, $max-breakpoint:1000px){
         display: flex;
-        width: 100%;
+        // width: 100%;
         margin: auto;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -206,7 +206,7 @@
 }
 
 @mixin footer_align {
-    width: 100%;
+    // width: 100%;
     padding: 0;
     margin-left: 20px;
     

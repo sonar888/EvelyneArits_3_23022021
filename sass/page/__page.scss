@@ -78,7 +78,8 @@
     }
 
     & section {
-        // border: solid;
+        padding: 0 10px;
+        border: solid red;
         @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
             padding-right: 10px;
             padding-left: 0;
@@ -98,8 +99,14 @@
 
         & .figure {
             cursor: pointer;
+            
             &:hover > .select {
-                animation: hover 300ms forwards linear;
+                transform: scaleX(1); 
+                transition: transform 1s;   
+            }
+            & > .select {
+                transform: scaleX(0); 
+                transition: transform 1s;
                 
             }
 
@@ -133,6 +140,7 @@
     display: flex;
     // align-items: baseline;
     // height: 100%;
+    justify-content: space-between;
     width: 90%;
     border-radius: 25px;
     background-color: white;
@@ -158,23 +166,29 @@
     & .choice {
         @include flex (row);
         justify-content: space-between;
-        width: 100%;
+        width: 80%;
         // display: inline;
         position: relative;
-        // border: solid purple;
+        border: solid purple;
         margin: 0px auto;
         padding: 10px 0;
         position: relative;
+        overflow: hidden;
 
         
         &__selection {
-            // border: solid red;
+            border: solid red;
+            // white-space: nowrap;
             padding-left: 10px;
             margin: 0;
-            width: auto;
+            width: 100%;
             max-width: 100%;
+            // word-break: break-all;
             // padding-left:px;
             font-size: 1rem;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+
             & strong {
                 @include h3_font;
             }
@@ -185,16 +199,18 @@
             padding-right: 5px;
             // height: 100%;
             position: absolute;
-            right: -15%;
+            right: -10%;
             bottom: -10px;
             font-weight: bold;
+            
             
             
         }
     }
     & .select {  
-        // border: solid green;
+        border: solid green;
         width: 25%;
+        
         padding: 0;
         margin: 0;
         border-radius: 0 25px 25px 0;
@@ -205,6 +221,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-overflow: ellipsis;
         
         
        
@@ -225,6 +242,7 @@
 @keyframes rot{
     0% {
         transform: rotate(90deg);
+        opacity: 0;
     }
 
     100% {
@@ -234,14 +252,27 @@
 
 
 
-@keyframes hover{
-    0% {
-        transform: scaleX(0);   
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
+// @keyframes hover{
+//     from {
+//         width: 0;
+         
+//     }
+//     to {
+//         width: 25%;
+        
+//     }
+// }
+
+// @keyframes non-hover{
+//     from {
+//         width: 25%; 
+        
+//     }
+//     to {
+//         width: 0%;
+        
+//     }
+// }
 
 
 

@@ -41,11 +41,11 @@
 
 .working {
 
-    padding: 20px 0;
-    width: 100%;
+    padding: 20px 10px;
+    // width: 100%;
     margin: auto;
     background-color: white;
-    // border: solid blue;
+    border: solid blue;
     
     
 
@@ -61,7 +61,7 @@
 
         @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
         }
         
         // @include desktop {
@@ -173,7 +173,7 @@
 
 .restaurants {
     background-color: $background-color;
-    padding: 10px 0;
+    padding: 10px;
     & h2 {
         @include h2_font;
         text-align: left;
@@ -214,7 +214,7 @@
         background-color: white;
         border-radius: 25px;
         height: 250px;
-        margin: 0 auto 60px auto;
+        margin: 10px auto 60px auto;
         // border: solid blue;
         @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             width: 40%;

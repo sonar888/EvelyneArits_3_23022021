@@ -54,7 +54,6 @@ footer h2 {
   font-family: Shrikhand, Verdana, sans-serif;
   font-size: 1.1rem;
   font-weight: normal;
-  width: 100%;
   padding: 0;
   margin-left: 20px;
   text-align: left;
@@ -65,14 +64,12 @@ footer h2 {
   }
 }
 footer ul {
-  width: 100%;
   padding: 0;
   margin-left: 20px;
 }
 @media (min-width: 600px) and (max-width: 1000px) {
   footer ul {
     display: flex;
-    width: 100%;
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -294,10 +291,10 @@ footer .__list i {
 }
 
 .working {
-  padding: 20px 0;
-  width: 100%;
+  padding: 20px 10px;
   margin: auto;
   background-color: white;
+  border: solid blue;
 }
 .working h2 {
   font-size: 1.5rem;
@@ -317,7 +314,7 @@ footer .__list i {
 @media (min-width: 800px) and (max-width: 9999px) {
   .working ol {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .working ol li {
@@ -393,7 +390,7 @@ footer .__list i {
 
 .restaurants {
   background-color: #F4F6F6;
-  padding: 10px 0;
+  padding: 10px;
 }
 .restaurants h2 {
   font-size: 1.5rem;
@@ -423,7 +420,7 @@ footer .__list i {
   background-color: white;
   border-radius: 25px;
   height: 250px;
-  margin: 0 auto 60px auto;
+  margin: 10px auto 60px auto;
 }
 @media (min-width: 600px) and (max-width: 9999px) {
   .restaurants__fig {
@@ -661,6 +658,10 @@ footer .__list i {
     justify-content: space-around;
   }
 }
+.menu__container section {
+  padding: 0 10px;
+  border: solid red;
+}
 @media (min-width: 1000px) and (max-width: 9999px) {
   .menu__container section {
     padding-right: 10px;
@@ -682,7 +683,12 @@ footer .__list i {
   cursor: pointer;
 }
 .menu__container section .figure:hover > .select {
-  animation: hover 300ms forwards linear;
+  transform: scaleX(1);
+  transition: transform 1s;
+}
+.menu__container section .figure > .select {
+  transform: scaleX(0);
+  transition: transform 1s;
 }
 .menu__container section .figure:hover .choice__selection {
   max-width: 80%;
@@ -700,6 +706,7 @@ footer .__list i {
 
 .figure {
   display: flex;
+  justify-content: space-between;
   width: 90%;
   border-radius: 25px;
   background-color: white;
@@ -736,16 +743,19 @@ footer .__list i {
   margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   position: relative;
+  border: solid purple;
   margin: 0px auto;
   padding: 10px 0;
   position: relative;
+  overflow: hidden;
 }
 .figure .choice__selection {
+  border: solid red;
   padding-left: 10px;
   margin: 0;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   font-size: 1rem;
 }
@@ -765,11 +775,12 @@ footer .__list i {
   width: 10%;
   padding-right: 5px;
   position: absolute;
-  right: -15%;
+  right: -10%;
   bottom: -10px;
   font-weight: bold;
 }
 .figure .select {
+  border: solid green;
   width: 25%;
   padding: 0;
   margin: 0;
@@ -781,6 +792,7 @@ footer .__list i {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-overflow: ellipsis;
 }
 .figure .select .fas {
   color: white;
@@ -792,17 +804,10 @@ footer .__list i {
 @keyframes rot {
   0% {
     transform: rotate(90deg);
+    opacity: 0;
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes hover {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
   }
 }
 .fade-in {
