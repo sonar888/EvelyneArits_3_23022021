@@ -117,7 +117,7 @@
             
     
             & .fas {
-                size: $p_size;
+                font-size: $p_size;
                 padding: 15px 0 15px 40px;
                 @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
                     padding: 0 5px;

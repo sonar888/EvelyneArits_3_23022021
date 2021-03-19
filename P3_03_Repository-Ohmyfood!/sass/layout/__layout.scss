@@ -7,14 +7,14 @@
         display: flex;
         align-items: center;
         
-        //border: solid green;
+        
         position: relative;
         height: 100px;
 
         & .fa-arrow-left {
-            // border: solid blue;
-            padding: 15px 15px;
-            align-items: left;
+            
+            padding: 15px 30px 15px;
+            align-items:flex-start;
             color: black;
         }
 

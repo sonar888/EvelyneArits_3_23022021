@@ -253,7 +253,7 @@ footer .__list i {
   padding: 15px;
   border: none;
   border-radius: 50px;
-  padding: auto 10px;
+  padding: 0 10px;
   margin: auto;
   box-shadow: #d8dfdf 1px 5px;
   outline: none;
@@ -366,7 +366,7 @@ footer .__list i {
   position: absolute;
 }
 .working ol li .fas {
-  size: 1.2rem;
+  font-size: 1.2rem;
   padding: 15px 0 15px 40px;
 }
 @media (min-width: 800px) and (max-width: 9999px) {
@@ -524,8 +524,8 @@ footer .__list i {
   height: 100px;
 }
 .menu__header--headline .fa-arrow-left {
-  padding: 15px 15px;
-  align-items: left;
+  padding: 15px 30px 15px;
+  align-items: flex-start;
   color: black;
 }
 .menu__header--headline h1 {
@@ -843,7 +843,7 @@ footer .__list i {
   padding: 15px;
   border: none;
   border-radius: 50px;
-  padding: auto 10px;
+  padding: 0 10px;
   margin: auto;
   box-shadow: #d8dfdf 1px 5px;
   outline: none;
