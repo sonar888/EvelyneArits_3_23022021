@@ -78,7 +78,6 @@ footer ul {
 @media (min-width: 1001px) and (max-width: 9999px) {
   footer ul {
     display: flex;
-    width: 100%;
     justify-content: space-between;
   }
 }
@@ -294,7 +293,6 @@ footer .__list i {
   padding: 20px 10px;
   margin: auto;
   background-color: white;
-  border: solid blue;
 }
 .working h2 {
   font-size: 1.5rem;
@@ -349,6 +347,7 @@ footer .__list i {
 }
 .working ol li:hover {
   color: #9356DC;
+  cursor: pointer;
 }
 .working ol li::before {
   content: counter(customised-counter) ".";
@@ -660,7 +659,6 @@ footer .__list i {
 }
 .menu__container section {
   padding: 0 10px;
-  border: solid red;
 }
 @media (min-width: 1000px) and (max-width: 9999px) {
   .menu__container section {
@@ -684,11 +682,11 @@ footer .__list i {
 }
 .menu__container section .figure:hover > .select {
   transform: scaleX(1);
-  transition: transform 1s;
+  transition: transform 700ms;
 }
 .menu__container section .figure > .select {
   transform: scaleX(0);
-  transition: transform 1s;
+  transition: transform 700ms;
 }
 .menu__container section .figure:hover .choice__selection {
   max-width: 80%;
@@ -696,12 +694,17 @@ footer .__list i {
   overflow: hidden;
 }
 .menu__container section .figure:hover .choice__price {
-  transform: translateX(-120%);
+  transform: translateX(-100%);
   transition-duration: 600ms;
-  transition-delay: 50ms;
+  transition-delay: 100ms;
+}
+.menu__container section .figure .choice__price {
+  transform: translateX(0%);
+  transition-duration: 600ms;
+  transition-delay: 100ms;
 }
 .menu__container section .figure:hover .fas {
-  animation: rot 500ms both;
+  animation: rot 700ms both;
 }
 
 .figure {
@@ -743,16 +746,12 @@ footer .__list i {
   margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  position: relative;
-  border: solid purple;
+  width: 100%;
   margin: 0px auto;
   padding: 10px 0;
-  position: relative;
   overflow: hidden;
 }
 .figure .choice__selection {
-  border: solid red;
   padding-left: 10px;
   margin: 0;
   width: 100%;
@@ -775,12 +774,12 @@ footer .__list i {
   width: 10%;
   padding-right: 5px;
   position: absolute;
-  right: -10%;
+  right: 10%;
   bottom: -10px;
   font-weight: bold;
+  z-index: 1000;
 }
 .figure .select {
-  border: solid green;
   width: 25%;
   padding: 0;
   margin: 0;
@@ -798,12 +797,12 @@ footer .__list i {
   color: white;
   height: 2rem;
   font-size: 2rem;
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 @keyframes rot {
   0% {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   100% {

@@ -79,7 +79,7 @@
 
     & section {
         padding: 0 10px;
-        border: solid red;
+        // border: solid red;
         @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
             padding-right: 10px;
             padding-left: 0;
@@ -102,11 +102,11 @@
             
             &:hover > .select {
                 transform: scaleX(1); 
-                transition: transform 1s;   
+                transition: transform 700ms;   
             }
             & > .select {
                 transform: scaleX(0); 
-                transition: transform 1s;
+                transition: transform 700ms;
                 
             }
 
@@ -118,15 +118,21 @@
             }
 
             &:hover .choice__price {
-                transform: translateX(-120%);
+                transform: translateX(-100%);
                 transition-duration: 600ms;
-                transition-delay: 50ms;
+                transition-delay: 100ms;
                 
+            }
+
+            & .choice__price {
+                transform: translateX(0%);
+                transition-duration: 600ms;
+                transition-delay: 100ms;
             }
 
             &:hover .fas {
                 
-                animation: rot 500ms both;
+                animation: rot 700ms both;
                 
             }
                 
@@ -166,18 +172,18 @@
     & .choice {
         @include flex (row);
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         // display: inline;
-        position: relative;
-        border: solid purple;
+        // position: relative;
+        // border: solid purple;
         margin: 0px auto;
         padding: 10px 0;
-        position: relative;
+        // position: relative;
         overflow: hidden;
 
         
         &__selection {
-            border: solid red;
+            // border: solid red;
             // white-space: nowrap;
             padding-left: 10px;
             margin: 0;
@@ -199,16 +205,17 @@
             padding-right: 5px;
             // height: 100%;
             position: absolute;
-            right: -10%;
+            right: 10%;
             bottom: -10px;
             font-weight: bold;
+            z-index: 1000;
             
             
             
         }
     }
     & .select {  
-        border: solid green;
+        // border: solid green;
         width: 25%;
         
         padding: 0;
@@ -230,7 +237,7 @@
             color: white;
             height: 2rem;
             font-size: 2rem;
-            transform: rotate(90deg);
+            transform: rotate(0deg);
             
               
         }     
@@ -241,7 +248,7 @@
 
 @keyframes rot{
     0% {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
         opacity: 0;
     }
 
