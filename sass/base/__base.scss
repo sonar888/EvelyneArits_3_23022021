@@ -5,7 +5,6 @@ body {
     height: 100%;
     max-width: 1500px;
     margin: auto;
-    // border: solid red;
     font-size: 1rem;
     @include flex;
     @include p_font;
@@ -59,15 +58,10 @@ $timing: 3s;
     animation: fadeout both;
     animation-duration: 0ms;
     animation-delay: $timing;
-    // @include tablet {
-    //     width: $tablet-width;
-    // }
+    
     & .loader {
         width: 30px;
         height: 30px;
-        // display: inline-block;
-        // vertical-align: middle;
-        // position: relative;
         &--quart {
             position: relative;
             border-radius: 50%;
@@ -102,24 +96,14 @@ $timing: 3s;
 }
 
 .content {
-    // position: absolute;
+  
     top: 0;
-    // left: 0;
     animation: loaded 0ms both;
     animation-delay: $timing;
-    // min-width: $mobile-width;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    // @include tablet {
-    //     max-width: $tablet-width;
-    //     margin: auto;
-    // }
-    // @include desktop {
-    //     max-width: $content-width;
-    //     margin: auto;
-    // }
 }
 
 @keyframes loaded{

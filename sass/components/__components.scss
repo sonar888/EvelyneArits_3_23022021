@@ -14,14 +14,13 @@
     padding: 50px 0;
     @include flex;
     @include p_font (lighten($color: black, $amount: 15%));
-    //border: solid black;
     text-align: center;
     margin: auto;
     &__h2 {
         @include h2_font;
         width: $width;
-        //border: solid red;
     }
+
     &__p {
         width: $width;
         @include p_font;
@@ -42,10 +41,9 @@
 .working {
 
     padding: 20px 10px;
-    // width: 100%;
     margin: auto;
     background-color: white;
-    // border: solid blue;
+    
     
     
 
@@ -63,18 +61,7 @@
             display: flex;
             justify-content: space-between;
         }
-        
-        // @include desktop {
-        //     display: flex;
-            
-        // }
-        // @include tablet {
-        //     display: flex;
-            
-        // }
-        // @include breakpoint ($min-breakpoint: 801px, $max-breakpoint: 2000px) {
-        //     @include flex;
-        // }
+    
     
 
         & li {
@@ -102,17 +89,6 @@
 
             }
             
-            // @include tablet {
-            //     width: 70%;
-            //     padding: 0;
-            //     max-width: auto;
-            // }
-            // @include breakpoint ($min-breakpoint: $mobile-width, $max-breakpoint: 665px){
-            //     width: 70%;
-            //     padding: 0;
-            //     max-width: auto;
-    
-            // }
             
             
             &:hover {
@@ -141,7 +117,6 @@
             
     
             & .fas {
-                // border: solid blue;
                 size: $p_size;
                 padding: 15px 0 15px 40px;
                 @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
@@ -158,13 +133,10 @@
                 @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
                     padding: 0 5px;
                     text-align: center;
-                    // white-space: nowrap;
-                    // overflow: hidden;
     
                 }   
             }
     
-        
         }
 
     }      
@@ -181,13 +153,6 @@
     }
 
     &__container {
-        // border: solid;
-        // @include desktop {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     align-items: center;
-        //     justify-content: space-evenly;
-        // }
         @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             display: flex;
             flex-wrap: wrap;
@@ -195,17 +160,6 @@
             justify-content: space-evenly;
 
         }
-
-        // @include tablet {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     align-items: center;
-        //     justify-content: space-evenly;
-        // }
-        // @include breakpoint {
-        //     @include flex;
-
-        // }
         
     }
 
@@ -216,21 +170,10 @@
         border-radius: 25px;
         height: 250px;
         margin: 10px auto 60px auto;
-        // border: solid blue;
         @include breakpoint($min-breakpoint: 600px, $max-breakpoint:9999px){
             width: 40%;
 
         }
-        // @include tablet {
-        //     width: 40%;
-            
-        //     margin: 15px 0;
-        // }
-        // @include breakpoint {
-        //     width: 70%;
-        //     margin: 20px 0;
-
-        // }
         
 
 
@@ -252,12 +195,10 @@
             margin: 0;
             padding: 0;
             vertical-align: middle;
-            // border: solid green;
         }
         &--caption {
             @include flex(row);
             margin: auto 0;
-            // border: solid red;
             width: 100%;
             justify-content: space-between;
             position: relative;
@@ -272,7 +213,6 @@
             }
 
             & p {
-                // border: aqua solid;
                 padding: 0 25px;
                 margin: 0;
                 
@@ -280,7 +220,6 @@
 
             & .far {
                 position: absolute;
-                // border: solid black;
                 right: 0%;
                 padding-right: 10px;
                 font-size: 1.5rem;
@@ -296,7 +235,6 @@
             }
 
             & .fas {
-                // border: solid grey;
                 position: absolute;
                 right: 0%;
                 padding-right: 10px;

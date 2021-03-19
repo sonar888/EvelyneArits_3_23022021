@@ -9,11 +9,8 @@
     padding: 20px 0;
     margin: -55px 0 0;
     border-radius: $menu_radius $menu_radius 0 0;
-    // border: solid red;
-    // @include flex;
     width: 100%;
     @include breakpoint($min-breakpoint:650px, $max-breakpoint:1000px){
-        // min-height: 100px;
         max-width: 650px;
         border-radius: $menu_radius;
     }
@@ -22,7 +19,6 @@
     }
 
     &__headline {
-        // border: green solid;
         @include flex (row);
         align-items: baseline;
         justify-content: space-around;
@@ -33,7 +29,6 @@
         & h2 {
             @include h2_font;
             font-family: Shrikhand, Verdana, sans-serif;
-            // border: solid green;
             text-align: center;
         }
 
@@ -44,7 +39,6 @@
         & .far {
             display: inline-block;
             position: absolute;
-            // border: solid black;
             top: 50%;
             right: 10%;
             transform: translate(-50%, -50%);
@@ -53,10 +47,8 @@
         }
 
         & .fas {
-            // border: solid grey;
             display: inline-block;
             position: absolute;
-            // border: solid black;
             top: 50%;
             right: 10%;
             transform: translate(-50%, -50%);
@@ -71,7 +63,6 @@
 }
 
 .menu__container {
-    // border: solid;
     @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
         display: flex;
         justify-content: space-around;
@@ -79,7 +70,6 @@
 
     & section {
         padding: 0 10px;
-        // border: solid red;
         @include breakpoint($min-breakpoint:1000px, $max-breakpoint:9999px){
             padding-right: 10px;
             padding-left: 0;
@@ -142,10 +132,7 @@
 }
 
 .figure {
-    // border: solid blue;
     display: flex;
-    // align-items: baseline;
-    // height: 100%;
     justify-content: space-between;
     width: 90%;
     border-radius: 25px;
@@ -173,37 +160,25 @@
         @include flex (row);
         justify-content: space-between;
         width: 100%;
-        // display: inline;
-        // position: relative;
-        // border: solid purple;
         margin: 0px auto;
         padding: 10px 0;
-        // position: relative;
         overflow: hidden;
 
         
         &__selection {
-            // border: solid red;
-            // white-space: nowrap;
             padding-left: 10px;
             margin: 0;
             width: 100%;
             max-width: 100%;
-            // word-break: break-all;
-            // padding-left:px;
             font-size: 1rem;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
 
             & strong {
                 @include h3_font;
             }
         }
         &__price {
-            // border: solid red;
             width: 10%;
             padding-right: 5px;
-            // height: 100%;
             position: absolute;
             right: 10%;
             bottom: -10px;
@@ -215,9 +190,7 @@
         }
     }
     & .select {  
-        // border: solid green;
         width: 25%;
-        
         padding: 0;
         margin: 0;
         border-radius: 0 25px 25px 0;
@@ -256,31 +229,6 @@
         transform: rotate(360deg);
     }
 }
-
-
-
-// @keyframes hover{
-//     from {
-//         width: 0;
-         
-//     }
-//     to {
-//         width: 25%;
-        
-//     }
-// }
-
-// @keyframes non-hover{
-//     from {
-//         width: 25%; 
-        
-//     }
-//     to {
-//         width: 0%;
-        
-//     }
-// }
-
 
 
 .fade-in {
