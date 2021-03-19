@@ -30,7 +30,6 @@
         margin: nth($margin_padding, 4);
         @include btn;
         @include p_font (white);
-        
     }
     & .--margin {
         margin: 15px auto;
