@@ -27,14 +27,15 @@
           
     }
     &__btn {
-        margin: nth($margin_padding, 4);
+        margin: 20px;
         @include btn;
         @include p_font (white);
     }
-    & .--margin {
-        margin: 15px auto;
-    }
 
+}
+
+.margin {
+    margin: 15px auto;
 }
 
 .working {
@@ -196,16 +197,17 @@
             vertical-align: middle;
         }
         &--caption {
-            @include flex(row);
+            display: flex;
             margin: auto 0;
             width: 100%;
             justify-content: space-between;
             position: relative;
-            & --h3 {
+            & .h3 {
                 padding: 0;
                 margin: 0;
                 @include h3_font;
             }
+
             &:hover .fas {
                 opacity: 1;
                 cursor: pointer;
@@ -214,7 +216,7 @@
             & p {
                 padding: 0 25px;
                 margin: 0;
-                
+                text-align: start;   
             }
 
             & .far {

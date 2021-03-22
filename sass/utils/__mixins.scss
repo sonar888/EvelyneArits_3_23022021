@@ -63,13 +63,12 @@
 }
 
 @mixin btn {
-    padding: nth($margin_padding, 3);
-    border: none;
     border-radius: 50px;
-    padding: 0 10px;
+    padding: 15px;
     margin: auto;
     box-shadow: darken($background-color, 10%) 1px 5px;
     outline: none;
+    border: none;
     transform: scale(1);
     transition: 500ms;
     cursor:pointer;
