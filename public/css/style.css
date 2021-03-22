@@ -513,6 +513,7 @@ footer .__list i {
 .menu__header {
   position: relative;
   background-color: white;
+  width: 100%;
 }
 .menu__header--headline {
   display: flex;
