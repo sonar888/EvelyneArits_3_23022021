@@ -145,7 +145,7 @@ footer .__list i {
   justify-content: center;
   animation: fadeout both;
   animation-duration: 0ms;
-  animation-delay: 0s;
+  animation-delay: 3s;
 }
 .loading-page .loader {
   width: 30px;
@@ -167,7 +167,7 @@ footer .__list i {
   border: 6px solid transparent;
   border-top-color: #bcc8c8;
   animation: spin linear both;
-  animation-duration: 0s;
+  animation-duration: 3s;
 }
 
 @keyframes spin {
@@ -189,7 +189,7 @@ footer .__list i {
 .content {
   top: 0;
   animation: loaded 0ms both;
-  animation-delay: 0s;
+  animation-delay: 3s;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -687,6 +687,7 @@ footer .__list i {
   max-width: 80%;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__container section .figure:hover .choice__price {
   transform: translateX(-100%);
