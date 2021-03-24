@@ -56,37 +56,41 @@
     & ol {
         list-style: none;
         counter-reset: customised-counter;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        // border: solid blue;
+        margin: auto 0px;
 
         @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: auto;
+            margin: auto;
         }
     
     
 
         & li {
             @include p_font;
+            width: 80%;
             // border: solid red;
             align-items: baseline;
-            @include flex(row);
             justify-content: space-evenly;
             background-color: $background-color;
             border-radius: 25px;
-            margin: 25px auto;
-            padding: 0 25px;
             position: relative;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 0px 5px 10px darken($color: $background-color, $amount: 20%);
-            width: fit-content;
+            display: flex;
+            padding: 10px 15px;
+            margin: 20px auto;
+            max-width: 400px;
+
             @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
                 width: 25%;
-                display: flex;
-                justify-content: space-evenly;
-                padding: 0 15px;
-                margin: 0 auto;
-                
-                
-
+                padding: 5px 0 0 10px;
             }
             
             
@@ -99,7 +103,7 @@
             counter-increment: customised-counter;
 
             &::before {
-                content: counter(customised-counter) ".";
+                content: counter(customised-counter) "";
                 color: white;
                 background-color: $primary-color;
                 height: 25px;
@@ -113,16 +117,19 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 position: absolute;
+                
               }
+            
+            
             
     
             & .fas {
                 font-size: $p_size;
-                padding: 15px 0 15px 40px;
-                @include breakpoint($min-breakpoint:800px, $max-breakpoint:9999px){
-                    padding: 0 5px;
+                padding: 15px 0 15px 10px;
+                // @include breakpoint($min-breakpoint:500px, $max-breakpoint:9999px){
+                //     padding: 0 5px;
     
-                }
+                // }
                 
                   
             }

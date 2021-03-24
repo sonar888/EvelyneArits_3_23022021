@@ -145,7 +145,7 @@ footer .__list i {
   justify-content: center;
   animation: fadeout both;
   animation-duration: 0ms;
-  animation-delay: 3s;
+  animation-delay: 0s;
 }
 .loading-page .loader {
   width: 30px;
@@ -167,7 +167,7 @@ footer .__list i {
   border: 6px solid transparent;
   border-top-color: #bcc8c8;
   animation: spin linear both;
-  animation-duration: 3s;
+  animation-duration: 0s;
 }
 
 @keyframes spin {
@@ -189,7 +189,7 @@ footer .__list i {
 .content {
   top: 0;
   animation: loaded 0ms both;
-  animation-delay: 3s;
+  animation-delay: 0s;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -309,41 +309,42 @@ footer .__list i {
 .working ol {
   list-style: none;
   counter-reset: customised-counter;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto 0px;
 }
 @media (min-width: 800px) and (max-width: 9999px) {
   .working ol {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+    margin: auto;
   }
 }
 .working ol li {
   font-family: Roboto, Verdana, sans-serif;
   font-size: 1.2rem;
   color: black;
+  width: 80%;
   align-items: baseline;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: row;
   justify-content: space-evenly;
   background-color: #F4F6F6;
   border-radius: 25px;
-  margin: 25px auto;
-  padding: 0 25px;
   position: relative;
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0px 5px 10px #bcc8c8;
-  width: fit-content;
+  display: flex;
+  padding: 10px 15px;
+  margin: 20px auto;
+  max-width: 400px;
   counter-increment: customised-counter;
 }
 @media (min-width: 800px) and (max-width: 9999px) {
   .working ol li {
     width: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 15px;
-    margin: 0 auto;
+    padding: 5px 0 0 10px;
   }
 }
 .working ol li:hover {
@@ -351,7 +352,7 @@ footer .__list i {
   cursor: pointer;
 }
 .working ol li::before {
-  content: counter(customised-counter) ".";
+  content: counter(customised-counter) "";
   color: white;
   background-color: #9356DC;
   height: 25px;
@@ -368,12 +369,7 @@ footer .__list i {
 }
 .working ol li .fas {
   font-size: 1.2rem;
-  padding: 15px 0 15px 40px;
-}
-@media (min-width: 800px) and (max-width: 9999px) {
-  .working ol li .fas {
-    padding: 0 5px;
-  }
+  padding: 15px 0 15px 10px;
 }
 .working ol li p {
   font-family: Roboto, Verdana, sans-serif;
